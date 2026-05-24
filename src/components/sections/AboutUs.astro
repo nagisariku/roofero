@@ -1,0 +1,96 @@
+---
+import { Button } from "../ui/button";
+---
+
+<section id="about">
+  <div
+    class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-5 gap-8 items-start"
+  >
+    <!-- Left Column (About Us Label) -->
+    <div class="lg:col-span-1 pt-2">
+      <span
+        class="text-foreground font-heading text-base font-semibold border-b border-foreground pb-1"
+      >
+        About Us
+      </span>
+    </div>
+
+    <!-- Right Column (Details) -->
+    <div class="lg:col-span-4 flex flex-col items-start text-left">
+      <h2 class="text-foreground mb-6">
+        Built on trust backed experience driven by quality committed to
+        protection powered precision for your better future.
+      </h2>
+
+      <p class="text-muted-foreground body-text mb-8 max-w-4xl">
+        We are a team of certified roofing professionals committed to protecting
+        homes and businesses with durable, high-quality roofing systems. With
+        years of industry experience, we bring precision, reliability, and peace
+        of mind to every project. Whether it's a minor repair...
+      </p>
+
+      <!-- Horizontal feature points on desktop, stack on mobile -->
+      <div
+        class="flex flex-col sm:flex-row flex-wrap gap-x-12 gap-y-4 mb-10 w-full"
+      >
+        <!-- Point 1 -->
+        <div class="flex items-center gap-2">
+          <span
+            class="size-5 rounded-full border border-foreground flex items-center justify-center text-foreground shrink-0"
+          >
+            <i class="ph ph-check text-[12px] font-bold"></i>
+          </span>
+          <span class="font-heading text-base font-semibold text-foreground"
+            >Built on Trust & Reliability</span
+          >
+        </div>
+        <!-- Point 2 -->
+        <div class="flex items-center gap-2">
+          <span
+            class="size-5 rounded-full border border-foreground flex items-center justify-center text-foreground shrink-0"
+          >
+            <i class="ph ph-check text-[12px] font-bold"></i>
+          </span>
+          <span class="font-heading text-base font-semibold text-foreground"
+            >Skilled in Every Fix</span
+          >
+        </div>
+        <!-- Point 3 -->
+        <div class="flex items-center gap-2">
+          <span
+            class="size-5 rounded-full border border-foreground flex items-center justify-center text-foreground shrink-0"
+          >
+            <i class="ph ph-check text-[12px] font-bold"></i>
+          </span>
+          <span class="font-heading text-base font-semibold text-foreground"
+            >Fast Response, Every Time</span
+          >
+        </div>
+      </div>
+
+      <a href="/about-us">
+        <Button variant="secondary" size="lg" client:load> Read More About Us </Button>
+      </a>
+
+      <!-- About Us Images Component Block -->
+      <div class="mt-12 grid grid-cols-12 gap-6 w-full">
+        <!-- Left Image: Close-up of wiring -->
+        <div class="col-span-12 sm:col-span-4">
+          <img
+            src="/images/about-wiring.jpg"
+            alt="Roofero technician working on wiring"
+            class="w-full h-[200px] md:h-[270px] object-cover rounded-lg border border-border"
+          />
+        </div>
+        <!-- Right Image: Installing metal roofing -->
+        <div class="col-span-12 sm:col-span-8">
+          <img
+            src="/images/about-roofing.jpg"
+            alt="Roofero team installing metal roofing panels"
+            class="w-full h-[240px] md:h-[330px] object-cover rounded-lg border border-border"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

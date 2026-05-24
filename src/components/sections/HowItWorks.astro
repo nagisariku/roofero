@@ -1,0 +1,111 @@
+---
+import { Button } from "../ui/button";
+---
+
+<section id="how-it-works">
+  <div class="max-w-[1440px] mx-auto flex flex-col">
+    <!-- Section Header -->
+    <div
+      class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16"
+    >
+      <div class="flex flex-col items-start text-left">
+        <span
+          class="text-foreground font-heading text-base font-semibold border-b border-foreground pb-1 mb-8 inline-block"
+        >
+          How It Works
+        </span>
+        <h2 class="text-foreground max-w-2xl">
+          How We Serve Your Home with Care and Expertise
+        </h2>
+      </div>
+      <div class="shrink-0 flex justify-start md:justify-end w-full md:w-auto">
+        <a href="/contact-us">
+          <Button variant="secondary" size="lg" client:load>
+            Get In Touch
+          </Button>
+        </a>
+      </div>
+    </div>
+
+    <!-- Steps Grid (3x2 flat grid on desktop) -->
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-[3fr_3fr_4fr] gap-6 md:gap-8 w-full"
+    >
+      <!-- Card 1 -->
+      <div
+        class="bg-electric-lime rounded-lg p-8 md:p-10 flex flex-col justify-between aspect-square border border-electric-lime shadow-sm text-deep-black"
+      >
+        <div>
+          <div
+            class="size-12 rounded-full bg-deep-black flex items-center justify-center text-electric-lime mb-8"
+          >
+            <i class="ph ph-bell text-[24px]"></i>
+          </div>
+        </div>
+        <div>
+          <h3 class="h5 text-deep-black mb-3">Book Your Service</h3>
+          <p class="text-deep-black/80 body-sm">
+            Reach out to us, pick a service, and schedule a visit that suits
+            your time.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div
+        class="bg-light-gray dark:bg-brand-dark/50 rounded-lg p-8 md:p-10 flex flex-col justify-between aspect-square border border-border shadow-sm text-foreground"
+      >
+        <div>
+          <div
+            class="size-12 rounded-full bg-deep-black dark:bg-electric-lime flex items-center justify-center text-electric-lime dark:text-deep-black mb-8"
+          >
+            <i class="ph ph-gear text-[24px]"></i>
+          </div>
+        </div>
+        <div>
+          <h3 class="h5 text-foreground mb-3">Get a Free Assessment</h3>
+          <p class="text-muted-foreground body-sm">
+            Contact us, choose a service, and schedule your convenient visit.
+          </p>
+        </div>
+      </div>
+
+      <!-- Empty Cell Row 1 Col 3 (Hidden on Mobile/Tablet) -->
+      <div class="hidden md:block pointer-events-none"></div>
+
+      <!-- Card 3 -->
+      <div
+        class="bg-light-gray dark:bg-brand-dark/50 rounded-lg p-8 md:p-10 flex flex-col justify-between aspect-square border border-border shadow-sm text-foreground"
+      >
+        <div>
+          <div
+            class="size-12 rounded-full bg-deep-black dark:bg-electric-lime flex items-center justify-center text-electric-lime dark:text-deep-black mb-8"
+          >
+            <i class="ph ph-chat-centered-text text-[24px]"></i>
+          </div>
+        </div>
+        <div>
+          <h3 class="h5 text-foreground mb-3">We Get to Work</h3>
+          <p class="text-muted-foreground body-sm">
+            Message us, choose your service, and arrange a visit at your
+            convenience.
+          </p>
+        </div>
+      </div>
+
+      <!-- Empty Cell Row 2 Col 2 (Hidden on Mobile/Tablet) -->
+      <div class="hidden md:block pointer-events-none"></div>
+
+      <!-- Handshake Image Cell -->
+      <div
+        class="relative w-full aspect-square md:aspect-auto overflow-hidden rounded-lg border border-border shadow-sm"
+      >
+        <img
+          src="/images/worker-handshake.jpg"
+          alt="Roofero technician shaking hands with client"
+          class="absolute inset-0 w-full h-full object-cover object-center"
+        />
+      </div>
+    </div>
+  </div>
+</section>

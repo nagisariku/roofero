@@ -1,0 +1,532 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Services from "../components/sections/Services.astro";
+import ClientFeedback from "@/components/sections/ClientFeedback.astro";
+import TeamCarousel from "../components/sections/TeamCarousel";
+import { Button } from "@/components/ui/button";
+---
+
+<Layout
+  title="About Our Roofing & Solar Agency — Quality Team | Roofero"
+  description="Learn about Roofero's heritage, certified roofing expertise, and commitment to quality. Meet our elite team of craftsmen and explore our core values. Learn more ✓"
+>
+  <main class="page-wrapper">
+    <section id="about-hero">
+      <div class="max-w-[1440px] mx-auto flex flex-col">
+        <!-- Grid section for Story Details -->
+        <div class="grid grid-cols-1 gap-8 lg:gap-12 items-start">
+          <!-- Left Column (Our Story Label) -->
+          <div
+            class="lg:col-span-4 pt-1 flex flex-col items-start gap-4 mb-8 md:mb-12"
+          >
+            <span
+              class="text-foreground font-heading text-base font-semibold border-b border-foreground pb-1 inline-block"
+            >
+              Our Story
+            </span>
+            <h1 class="text-foreground font-heading font-medium tracking-tight">
+              About Us
+            </h1>
+          </div>
+
+          <!-- Right Column (Story Paragraphs) -->
+          <div class="lg:col-span-8 flex flex-col items-start">
+            <h3
+              class="text-foreground font-heading font-medium leading-snug mb-6"
+            >
+              At Roofero, We provide reliable plumbing, expert electrical work,
+              and durable roofing. Our certified team delivers high-quality
+              service with a focus on safety, precision, and lasting results for
+              your home or business for better your life.
+            </h3>
+            <p
+              class="text-muted-foreground body-text leading-relaxed font-medium"
+            >
+              We are a team of certified roofing professionals committed to
+              protecting homes and businesses with durable, high-quality roofing
+              systems. With years of industry experience, we bring precision,
+              reliability, and peace of mind to every project Whether it's a
+              minor repair.
+            </p>
+          </div>
+        </div>
+
+        <!-- Staggered Cards Section -->
+        <div
+          class="mt-20 lg:mt-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:pb-28"
+        >
+          <!-- Card 1 (Fast Service) -->
+          <div
+            class="bg-electric-lime text-deep-black p-8 rounded-[20px] md:aspect-[4/5] aspect-auto min-h-[260px] flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 hover:shadow-[0px_8px_24px_rgba(205,246,96,0.3)] group lg:translate-y-0"
+          >
+            <div
+              class="size-14 rounded-full bg-deep-black text-electric-lime flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0"
+            >
+              <i class="ph ph-clock text-[26px]"></i>
+            </div>
+            <div class="mt-8">
+              <h5
+                class="text-deep-black font-heading font-semibold mb-3 leading-tight"
+              >
+                Fast Service
+              </h5>
+              <p class="text-deep-black/85 body-sm font-medium leading-relaxed">
+                Quick Solutions Delivered With Trusted Precision
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 (Expert Team) -->
+          <div
+            class="bg-electric-lime text-deep-black p-8 rounded-[20px] md:aspect-[4/5] aspect-auto min-h-[260px] flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 hover:shadow-[0px_8px_24px_rgba(205,246,96,0.3)] group lg:translate-y-8"
+          >
+            <div
+              class="size-14 rounded-full bg-deep-black text-electric-lime flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0"
+            >
+              <i class="ph ph-shield-star text-[26px]"></i>
+            </div>
+            <div class="mt-8">
+              <h5
+                class="text-deep-black font-heading font-semibold mb-3 leading-tight"
+              >
+                Expert Team
+              </h5>
+              <p class="text-deep-black/85 body-sm font-medium leading-relaxed">
+                Certified Professionals industry to the Excellence.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 (Decade Experience) -->
+          <div
+            class="bg-electric-lime text-deep-black p-8 rounded-[20px] md:aspect-[4/5] aspect-auto min-h-[260px] flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 hover:shadow-[0px_8px_24px_rgba(205,246,96,0.3)] group lg:translate-y-16"
+          >
+            <div
+              class="size-14 rounded-full bg-deep-black text-electric-lime flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0"
+            >
+              <i class="ph ph-calendar text-[26px]"></i>
+            </div>
+            <div class="mt-8">
+              <h5
+                class="text-deep-black font-heading font-semibold mb-3 leading-tight"
+              >
+                Decade Experience
+              </h5>
+              <p class="text-deep-black/85 body-sm font-medium leading-relaxed">
+                Over Ten Years Expertise in the industry have proven.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4 (Project Success) -->
+          <div
+            class="bg-electric-lime text-deep-black p-8 rounded-[20px] md:aspect-[4/5] aspect-auto min-h-[260px] flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 hover:shadow-[0px_8px_24px_rgba(205,246,96,0.3)] group lg:translate-y-24"
+          >
+            <div
+              class="size-14 rounded-full bg-deep-black text-electric-lime flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0"
+            >
+              <i class="ph ph-check-circle text-[26px]"></i>
+            </div>
+            <div class="mt-8">
+              <h5
+                class="text-deep-black font-heading font-semibold mb-3 leading-tight"
+              >
+                Project Success
+              </h5>
+              <p class="text-deep-black/85 body-sm font-medium leading-relaxed">
+                Completed Hundreds Of Projects Flawlessly
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mission Section -->
+        <div
+          class="mt-16 lg:mt-32 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center"
+        >
+          <!-- Left Column: Image -->
+          <div class="lg:col-span-5 w-full">
+            <div
+              class="overflow-hidden rounded-[20px] aspect-[4/3] md:aspect-[1.1] lg:aspect-square w-full"
+            >
+              <img
+                src="/images/about-wiring.jpg"
+                alt="Technician working on electrical wiring with safety gear"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          <!-- Right Column: Content -->
+          <div class="lg:col-span-7 flex flex-col items-start lg:pl-4">
+            <span
+              class="text-foreground font-heading text-base font-semibold border-b border-foreground pb-1 inline-block mb-6"
+            >
+              Our Mission
+            </span>
+            <h2 class="text-foreground tracking-tight leading-tight mb-6">
+              Protecting what matters most together
+            </h2>
+            <p
+              class="text-muted-foreground body-text leading-relaxed font-medium mb-8"
+            >
+              To provide durable, high-quality roofing services that protect
+              families, businesses, and investments — all backed by integrity,
+              expertise, and trust.
+            </p>
+
+            <ul class="flex flex-col gap-4 w-full">
+              <li class="flex items-center gap-3">
+                <i
+                  class="ph ph-check-circle text-foreground text-[22px] lg:text-[24px] shrink-0"
+                ></i>
+                <span
+                  class="font-heading font-semibold text-base lg:text-lg text-foreground"
+                >
+                  Deliver Trusted Roofing Solutions
+                </span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i
+                  class="ph ph-check-circle text-foreground text-[22px] lg:text-[24px] shrink-0"
+                ></i>
+                <span
+                  class="font-heading font-semibold text-base lg:text-lg text-foreground"
+                >
+                  Prioritize Customer Satisfaction
+                </span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i
+                  class="ph ph-check-circle text-foreground text-[22px] lg:text-[24px] shrink-0"
+                ></i>
+                <span
+                  class="font-heading font-semibold text-base lg:text-lg text-foreground"
+                >
+                  Build With Integrity & Excellence
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about-services" class="section-wrapper"><Services /></section>
+
+    <!-- Flexible Pricing Section -->
+    <section id="about-pricing" class="bg-background py-16 md:py-[68px] w-full">
+      <div class="max-w-[1440px] mx-auto flex flex-col gap-12 md:gap-16">
+        <!-- Section Header -->
+        <div
+          class="flex flex-col md:flex-row md:justify-between md:items-end gap-6"
+        >
+          <div class="flex flex-col items-start gap-4">
+            <span
+              class="text-foreground font-heading text-base font-semibold border-b border-foreground pb-1 inline-block"
+            >
+              Flexible Pricing
+            </span>
+            <h2
+              class="text-foreground font-heading font-medium tracking-tight max-w-xl mb-0 leading-tight"
+            >
+              Pricing that matches<br class="hidden sm:inline" /> our promise
+            </h2>
+          </div>
+
+          <div class="self-start md:self-auto">
+            <a href="/pricing">
+              <Button
+                className="inline-block"
+                variant="secondary"
+                size="lg"
+                client:load
+              >
+                View More Pricing
+              </Button>
+            </a>
+          </div>
+        </div>
+
+        <!-- Content Grid -->
+        <div
+          class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center"
+        >
+          <!-- Left: Pricing List -->
+          <div class="lg:col-span-7 flex flex-col border-t border-border">
+            <!-- Item 1 (Plumbing) -->
+            <a
+              href="/pricing"
+              class="pricing-row group flex items-center justify-between py-6 md:py-8 border-b border-border transition-all duration-300 hover:bg-electric-lime px-4 rounded-[12px] -mx-4 cursor-pointer hover:no-underline"
+              data-service="plumbing"
+            >
+              <div class="flex flex-col gap-1">
+                <h3
+                  class="h6 text-foreground font-heading font-semibold transition-colors duration-300 group-hover:text-deep-black"
+                >
+                  Leak Repair (Plumbing)
+                </h3>
+              </div>
+              <div class="flex items-center gap-6 md:gap-10">
+                <span
+                  class="text-muted-foreground font-heading font-medium text-base md:text-lg transition-colors duration-300 group-hover:text-deep-black/80"
+                >
+                  Starting at $89
+                </span>
+                <div
+                  class="size-12 rounded-full bg-light-neutral dark:bg-white/10 flex items-center justify-center text-foreground transition-all duration-300 group-hover:bg-deep-black group-hover:text-electric-lime group-hover:scale-110"
+                >
+                  <i
+                    class="ph ph-arrow-up-right text-[20px] transition-transform duration-300 group-hover:rotate-45"
+                  ></i>
+                </div>
+              </div>
+            </a>
+
+            <!-- Item 2 (Electrical) -->
+            <a
+              href="/pricing"
+              class="pricing-row group flex items-center justify-between py-6 md:py-8 border-b border-border transition-all duration-300 hover:bg-electric-lime px-4 rounded-[12px] -mx-4 cursor-pointer hover:no-underline"
+              data-service="electrical"
+            >
+              <div class="flex flex-col gap-1">
+                <h3
+                  class="h6 text-foreground font-heading font-semibold transition-colors duration-300 group-hover:text-deep-black"
+                >
+                  Light Installation (Electrical)
+                </h3>
+              </div>
+              <div class="flex items-center gap-6 md:gap-10">
+                <span
+                  class="text-muted-foreground font-heading font-medium text-base md:text-lg transition-colors duration-300 group-hover:text-deep-black/80"
+                >
+                  Starting at $129
+                </span>
+                <div
+                  class="size-12 rounded-full bg-light-neutral dark:bg-white/10 flex items-center justify-center text-foreground transition-all duration-300 group-hover:bg-deep-black group-hover:text-electric-lime group-hover:scale-110"
+                >
+                  <i
+                    class="ph ph-arrow-up-right text-[20px] transition-transform duration-300 group-hover:rotate-45"
+                  ></i>
+                </div>
+              </div>
+            </a>
+
+            <!-- Item 3 (Roofing) -->
+            <a
+              href="/pricing"
+              class="pricing-row group flex items-center justify-between py-6 md:py-8 border-b border-border transition-all duration-300 hover:bg-electric-lime px-4 rounded-[12px] -mx-4 cursor-pointer hover:no-underline"
+              data-service="roofing"
+            >
+              <div class="flex flex-col gap-1">
+                <h3
+                  class="h6 text-foreground font-heading font-semibold transition-colors duration-300 group-hover:text-deep-black"
+                >
+                  Roof Inspection (Roofing)
+                </h3>
+              </div>
+              <div class="flex items-center gap-6 md:gap-10">
+                <span
+                  class="text-muted-foreground font-heading font-medium text-base md:text-lg transition-colors duration-300 group-hover:text-deep-black/80"
+                >
+                  Starting at $99
+                </span>
+                <div
+                  class="size-12 rounded-full bg-light-neutral dark:bg-white/10 flex items-center justify-center text-foreground transition-all duration-300 group-hover:bg-deep-black group-hover:text-electric-lime group-hover:scale-110"
+                >
+                  <i
+                    class="ph ph-arrow-up-right text-[20px] transition-transform duration-300 group-hover:rotate-45"
+                  ></i>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Right: Dynamic Image (Cross-fading absolute stack) -->
+          <div class="lg:col-span-5 w-full flex justify-center lg:justify-end">
+            <div
+              class="relative overflow-hidden rounded-[20px] w-full max-w-[450px] aspect-[4/3] lg:aspect-square group border border-border bg-light-gray dark:bg-brand-dark/50"
+            >
+              <!-- Image 1: Plumbing -->
+              <img
+                id="service-image-plumbing"
+                src="/images/project-pipe-repair.jpg"
+                alt="Technician repairing plumbing system"
+                class="absolute inset-0 w-full h-full object-cover transition-all duration-500 opacity-0 scale-100 group-hover:scale-105"
+              />
+              <!-- Image 2: Electrical -->
+              <img
+                id="service-image-electrical"
+                src="/images/about-wiring.jpg"
+                alt="Technician working on electrical wiring"
+                class="absolute inset-0 w-full h-full object-cover transition-all duration-500 opacity-0 scale-100 group-hover:scale-105"
+              />
+              <!-- Image 3: Roofing (Default active) -->
+              <img
+                id="service-image-roofing"
+                src="/images/about-roof-tiling.png"
+                alt="Technician repairing roofing tiling with precision"
+                class="absolute inset-0 w-full h-full object-cover transition-all duration-500 opacity-100 scale-100 group-hover:scale-105"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Values Section -->
+    <section id="about-values" class="bg-background py-16 md:py-[68px] w-full">
+      <div class="max-w-[1440px] mx-auto flex flex-col gap-12 md:gap-16">
+        <!-- Section Header -->
+        <div class="flex flex-col items-start gap-4">
+          <span
+            class="text-foreground font-heading text-base font-semibold border-b border-foreground pb-1 inline-block"
+          >
+            Our Values
+          </span>
+          <h2
+            class="text-foreground font-heading font-medium tracking-tight max-w-xl mb-0 leading-tight"
+          >
+            Built on strong<br class="hidden sm:inline" /> foundations together
+          </h2>
+        </div>
+
+        <!-- Values Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          <!-- Card 1 (Integrity) -->
+          <div
+            class="group bg-light-gray dark:bg-white/5 text-foreground p-8 md:p-10 rounded-[20px] min-h-[260px] flex flex-col justify-between transition-all duration-300 hover:bg-electric-lime hover:text-deep-black hover:-translate-y-2 hover:shadow-[0px_8px_24px_rgba(205,246,96,0.2)] cursor-pointer"
+          >
+            <div>
+              <span
+                class="font-heading text-3xl font-bold tracking-tight text-foreground transition-colors duration-300 group-hover:text-deep-black mb-12 block"
+              >
+                01.
+              </span>
+            </div>
+            <div>
+              <h5
+                class="text-foreground font-heading font-semibold mb-3 transition-colors duration-300 group-hover:text-deep-black"
+              >
+                Integrity
+              </h5>
+              <p
+                class="text-muted-foreground body-sm transition-colors duration-300 group-hover:text-deep-black/80 leading-relaxed font-medium"
+              >
+                We honor our word and proudly stand behind our work, always
+                delivering excellence.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 (Quality - Default Active Lime) -->
+          <div
+            class="group bg-electric-lime text-deep-black p-8 md:p-10 rounded-[20px] min-h-[260px] flex flex-col justify-between transition-all duration-300 hover:bg-electric-lime-hover hover:-translate-y-2 hover:shadow-[0px_8px_24px_rgba(205,246,96,0.3)] cursor-pointer"
+          >
+            <div>
+              <span
+                class="font-heading text-3xl font-bold tracking-tight text-deep-black mb-12 block"
+              >
+                02.
+              </span>
+            </div>
+            <div>
+              <h5 class="text-deep-black font-heading font-semibold mb-3">
+                Quality
+              </h5>
+              <p class="text-deep-black/80 body-sm leading-relaxed font-medium">
+                We honor our word and proudly stand behind our work, always
+                delivering excellence.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 (Accountability) -->
+          <div
+            class="group bg-light-gray dark:bg-white/5 text-foreground p-8 md:p-10 rounded-[20px] min-h-[260px] flex flex-col justify-between transition-all duration-300 hover:bg-electric-lime hover:text-deep-black hover:-translate-y-2 hover:shadow-[0px_8px_24px_rgba(205,246,96,0.2)] cursor-pointer"
+          >
+            <div>
+              <span
+                class="font-heading text-3xl font-bold tracking-tight text-foreground transition-colors duration-300 group-hover:text-deep-black mb-12 block"
+              >
+                03.
+              </span>
+            </div>
+            <div>
+              <h5
+                class="text-foreground font-heading font-semibold mb-3 transition-colors duration-300 group-hover:text-deep-black"
+              >
+                Accountability
+              </h5>
+              <p
+                class="text-muted-foreground body-sm transition-colors duration-300 group-hover:text-deep-black/80 leading-relaxed font-medium"
+              >
+                We honor our word and proudly stand behind our work, always
+                delivering excellence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Team Section -->
+    <section id="about-team" class="bg-background py-16 md:py-[68px] w-full">
+      <div class="max-w-[1440px] mx-auto flex flex-col gap-8">
+        <!-- Section Header -->
+        <div class="flex flex-col items-start gap-4">
+          <span
+            class="text-foreground font-heading text-base font-semibold border-b border-foreground pb-1 inline-block"
+          >
+            Our Team
+          </span>
+          <h2
+            class="text-foreground font-heading font-medium tracking-tight max-w-xl mb-0 leading-tight"
+          >
+            Skilled hands trusted<br />Roofing results
+          </h2>
+        </div>
+      </div>
+
+      <TeamCarousel client:visible />
+    </section>
+
+    <section id="about-feedback" class="section-wrapper"><ClientFeedback /></section>
+  </main>
+
+  <!-- Client-side script to coordinate pricing row hovered image change -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const rows = document.querySelectorAll(".pricing-row");
+      const images: Record<string, HTMLElement | null> = {
+        plumbing: document.getElementById("service-image-plumbing"),
+        electrical: document.getElementById("service-image-electrical"),
+        roofing: document.getElementById("service-image-roofing"),
+      };
+
+      rows.forEach((row) => {
+        row.addEventListener("mouseenter", () => {
+          const service = row.getAttribute("data-service");
+
+          // Hide all images
+          Object.keys(images).forEach((key) => {
+            const img = images[key];
+            if (img) {
+              img.classList.remove("opacity-100", "z-10");
+              img.classList.add("opacity-0", "z-0");
+            }
+          });
+
+          // Show hovered image
+          if (service) {
+            const activeImg = images[service];
+            if (activeImg) {
+              activeImg.classList.remove("opacity-0", "z-0");
+              activeImg.classList.add("opacity-100", "z-10");
+            }
+          }
+        });
+      });
+    });
+  </script>
+</Layout>

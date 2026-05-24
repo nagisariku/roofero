@@ -1,0 +1,42 @@
+---
+import ContactForm from "../ContactForm";
+---
+
+<!-- Estimate Request Form Section -->
+<section id="estimate" class="bg-background py-20 md:py-32 px-6 md:px-[60px]">
+  <div
+    class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+  >
+    <div class="text-left">
+      <span
+        class="inline-flex items-center gap-1.5 bg-electric-lime/20 text-foreground border border-electric-lime/40 px-3 py-1 rounded-full font-sans text-sm font-semibold mb-4"
+      >
+        Get Started
+      </span>
+      <h2 class="text-foreground mb-6">Ready to protect your property?</h2>
+      <p class="text-muted-foreground body-text mb-6">
+        Fill out our form to request a free estimate. Our team of roofing and
+        solar experts will review your request and contact you within 24 hours
+        to schedule an inspection.
+      </p>
+      <div class="space-y-4 font-sans body-sm">
+        <div class="flex items-center gap-3 text-foreground">
+          <i
+            class="ph ph-phone text-[16px] text-brand-dark dark:text-electric-lime"
+          ></i>
+          <span>Call us directly: <strong>+1 (555) 0199</strong></span>
+        </div>
+        <div class="flex items-center gap-3 text-foreground">
+          <i
+            class="ph ph-envelope text-[16px] text-brand-dark dark:text-electric-lime"
+          ></i>
+          <span>Email: <strong>info@roofero.com</strong></span>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <ContactForm client:load />
+    </div>
+  </div>
+</section>

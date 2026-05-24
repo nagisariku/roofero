@@ -1,0 +1,201 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { Button } from "@/components/ui/button";
+import { projects } from "@/data/projects";
+
+export async function getStaticPaths() {
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+
+// Strip HTML tags and truncate description to prevent search engine truncation
+const plainDescription = project.overviewHtml.replace(/<[^>]*>/g, "");
+const metaDescription = plainDescription.length > 150
+  ? `${plainDescription.slice(0, 150)}... Read our full project results ✓`
+  : `${plainDescription} ✓`;
+---
+
+<Layout
+  title={`${project.title} — Roofing Case Study | Roofero`}
+  description={metaDescription}
+>
+  <main class="page-wrapper">
+    <!-- Main Center Wrapper -->
+    <div class="max-w-[1440px] mx-auto flex flex-col">
+      <!-- Center-aligned Back Button -->
+      <div class="flex justify-center mb-6">
+        <a
+          href="/projects"
+          class="inline-flex items-center gap-1 text-sm font-heading hover:text-brand-dark dark:hover:text-electric-lime border-b border-transparent hover:border-current pb-0.5 transition-all text-medium-gray font-medium cursor-pointer"
+        >
+          <i class="ph ph-caret-left text-[12px] shrink-0"></i> Projects
+        </a>
+      </div>
+
+      <section id="project-header" class="flex flex-col">
+        <!-- Center-aligned Large Title -->
+        <h1
+          class="text-center font-heading font-semibold text-foreground tracking-tight max-w-5xl mx-auto mb-10 md:mb-12"
+        >
+          {project.title}
+        </h1>
+
+      <!-- Main Landscape Image -->
+      <div
+        class="w-full max-w-[1120px] mx-auto overflow-hidden rounded-[12px] border border-border shadow-sm mb-12"
+      >
+        <img
+          src={project.mainImage}
+          alt={project.title}
+          class="w-full aspect-[21/10] md:aspect-[21/9] object-cover"
+          loading="eager"
+          fetchpriority="high"
+        />
+      </div>
+
+      <!-- 4-Column Meta Data Strip -->
+      <div
+        class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-[1120px] w-full mx-auto py-8 border-b border-border mb-16"
+      >
+        <div class="flex flex-col items-start">
+          <span
+            class="text-medium-gray font-heading text-sm md:text-base font-semibold mb-1"
+            >Location</span
+          >
+          <div
+            class="flex items-center gap-1.5 text-foreground text-base md:text-lg font-medium"
+          >
+            <i class="ph ph-map-pin text-[16px] text-medium-gray shrink-0"></i>
+            <span class="text-muted-foreground">{project.location}</span>
+          </div>
+        </div>
+        <div class="flex flex-col items-start">
+          <span
+            class="text-medium-gray font-heading text-sm md:text-base font-semibold mb-1"
+            >Client Type</span
+          >
+          <span class="text-muted-foreground text-base md:text-lg font-medium"
+            >{project.clientType}</span
+          >
+        </div>
+        <div class="flex flex-col items-start">
+          <span
+            class="text-medium-gray font-heading text-sm md:text-base font-semibold mb-1"
+            >Service Provided</span
+          >
+          <span class="text-muted-foreground text-base md:text-lg font-medium"
+            >{project.serviceProvided}</span
+          >
+        </div>
+        <div class="flex flex-col items-start">
+          <span
+            class="text-medium-gray font-heading text-sm md:text-base font-semibold mb-1"
+            >Project Duration</span
+          >
+          <span class="text-muted-foreground text-base md:text-lg font-medium"
+            >{project.duration}</span
+          >
+        </div>
+      </section>
+
+      <!-- Left-Aligned Reading Block (800px max width) -->
+      <div class="max-w-[800px] w-full mx-auto flex flex-col gap-16">
+        <!-- Project Overview -->
+        <section id="project-overview" class="flex flex-col gap-4">
+          <h3 class="text-foreground font-heading font-semibold tracking-tight">
+            Project Overview
+          </h3>
+          <p
+            class="text-muted-foreground leading-relaxed text-base md:text-lg font-medium"
+            set:html={project.overviewHtml}
+          />
+        </section>
+
+        <!-- Scope of Work -->
+        <section id="project-scope" class="flex flex-col gap-6">
+          <h3 class="text-foreground font-heading font-semibold tracking-tight">
+            Scope of Work
+          </h3>
+          <p
+            class="text-muted-foreground leading-relaxed text-base md:text-lg font-medium mb-4"
+            set:html={project.scopeIntroHtml}
+          />
+
+          <div class="flex flex-col gap-8">
+            {
+              project.scopeSteps.map((step) => (
+                <div class="flex flex-col gap-2">
+                  <h5 class="text-foreground font-heading font-semibold tracking-tight">
+                    {step.title}
+                  </h5>
+                  <p class="text-muted-foreground leading-relaxed text-base md:text-lg font-medium">
+                    {step.description}
+                  </p>
+                </div>
+              ))
+            }
+          </div>
+        </section>
+      </div>
+
+      <!-- Scope Images Grid (1120px max width) -->
+      <div
+        class="grid grid-cols-1 md:grid-cols-12 gap-6 max-w-[1120px] w-full mx-auto mt-16 mb-16"
+      >
+        <!-- Tall Left Image (5 cols) -->
+        <div
+          class="md:col-span-5 aspect-[3/4] overflow-hidden rounded-[8px] border border-border shadow-sm"
+        >
+          <img
+            src={project.scopeImages[0]}
+            alt={`${project.title} - Scope Step Left`}
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <!-- Wider Right Image (7 cols) -->
+        <div
+          class="md:col-span-7 aspect-[4/3] overflow-hidden rounded-[8px] border border-border shadow-sm"
+        >
+          <img
+            src={project.scopeImages[1]}
+            alt={`${project.title} - Scope Step Right`}
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+
+      <!-- Left-Aligned Reading Block (Results) -->
+      <div class="max-w-[800px] w-full mx-auto flex flex-col gap-16 mb-20">
+        <!-- Project Results -->
+        <section id="project-results" class="flex flex-col gap-6">
+          <h3 class="text-foreground font-heading font-semibold tracking-tight">
+            Project Results
+          </h3>
+          <p
+            class="text-muted-foreground leading-relaxed text-base md:text-lg font-medium mb-4"
+            set:html={project.resultsIntroHtml}
+          />
+
+          <div class="flex flex-col gap-8">
+            {
+              project.resultsSteps.map((step) => (
+                <div class="flex flex-col gap-2">
+                  <h5 class="text-foreground font-heading font-semibold tracking-tight">
+                    {step.title}
+                  </h5>
+                  <p class="text-muted-foreground leading-relaxed text-base md:text-lg font-medium">
+                    {step.description}
+                  </p>
+                </div>
+              ))
+            }
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+</Layout>

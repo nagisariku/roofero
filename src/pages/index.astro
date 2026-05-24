@@ -1,0 +1,29 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/sections/Hero.astro";
+import OverlayCards from "../components/sections/OverlayCards.astro";
+import AboutUs from "../components/sections/AboutUs.astro";
+import Services from "../components/sections/Services.astro";
+import Industries from "../components/sections/Industries.astro";
+import Projects from "../components/sections/Projects.astro";
+import HowItWorks from "../components/sections/HowItWorks.astro";
+import ClientFeedback from "../components/sections/ClientFeedback.astro";
+import FAQs from "../components/sections/FAQs.astro";
+---
+
+<Layout
+  title="Roofing & Solar Services — Premium Craftsmanship | Roofero"
+  description="Protect your property with Roofero's premium roofing and solar services. Get a free estimate on durable roof repairs, replacements & solar integrations ✓"
+>
+  <main class="page-wrapper">
+    <Hero />
+    <OverlayCards />
+    <section class="section-wrapper"><AboutUs /></section>
+    <section class="section-wrapper"><Services /></section>
+    <Industries />
+    <section class="section-wrapper"><Projects /></section>
+    <section class="section-wrapper"><HowItWorks /></section>
+    <section class="section-wrapper"><ClientFeedback /></section>
+    <section class="section-wrapper"><FAQs /></section>
+  </main>
+</Layout>

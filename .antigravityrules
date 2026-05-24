@@ -1,0 +1,221 @@
+# Antigravity Design System & Coding Rules (.antigravityrules)
+
+This file is the single, absolute source of truth for design tokens, styling rules, and coding conventions in this project. All AI agents, models, and developers must follow these rules strictly to ensure visual coherence. **Do not refer to the legacy `design.md` file; use this file instead.**
+
+---
+
+## 1. Stack & Architecture
+
+- **Core**: Astro (pages in `src/pages/`, components in `src/components/`)
+- **Styling**: Tailwind CSS v4 (configured in `src/styles/global.css`)
+- **Framework Integration**: React (for interactive components, using `client:load` in Astro)
+- **Smooth Scrolling**: Lenis (integrated via `src/components/SmoothScroll.tsx`)
+- **Standard UI Elements**: Radix-based custom Shadcn components in `src/components/ui/`
+
+---
+
+## 2. Design Tokens & Mappings
+
+These tokens are configured inside `src/styles/global.css` under Tailwind v4 `@theme`. Always use the corresponding Tailwind utility classes.
+
+### A. Color System
+
+All colors are fully responsive to dark/light modes via CSS variables and semantic classes:
+
+| Token Name        | Value     | Tailwind Class                            | Role / Purpose                                                             |
+| :---------------- | :-------- | :---------------------------------------- | :------------------------------------------------------------------------- |
+| **Electric Lime** | `#CDF660` | `bg-electric-lime` / `text-electric-lime` | Primary conversion accent, active links in footers, primary CTA background |
+| **Brand Dark**    | `#0E1201` | `bg-brand-dark` / `text-brand-dark`       | Hero backgrounds, page containers, dark theme base background              |
+| **Deep Black**    | `#000000` | `bg-deep-black` / `text-deep-black`       | Core text, borders, high-contrast overlay elements                         |
+| **Sky Blue**      | `#0099FF` | `bg-sky-blue` / `text-sky-blue`           | Secondary interactive accent (rare highlight states)                       |
+| **Link Blue**     | `#0000EE` | `bg-link-blue` / `text-link-blue`         | Default web-convention links, inline text links                            |
+| **Off-White**     | `#FFFFFF` | `bg-off-white` / `text-off-white`         | Light theme background, card surfaces, high-contrast text                  |
+| **Light Gray**    | `#F7F7F7` | `bg-light-gray` / `text-light-gray`       | Subtle background differentiation, light surface variants                  |
+| **Pale Cream**    | `#FCFFF5` | `bg-pale-cream` / `text-pale-cream`       | Accent warm neutral for specific sections                                  |
+| **Medium Gray**   | `#71726E` | `bg-medium-gray` / `text-medium-gray`     | Secondary text, disabled states, labels of reduced prominence              |
+| **Light Neutral** | `#EDEDED` | `bg-light-neutral` / `text-light-neutral` | Standard dividers, borders, separators                                     |
+
+#### Semantic Mode Mapping (Shadcn v4 compatible)
+
+To support dark mode seamlessly, use the following semantic Tailwind tokens:
+
+- **Background**: `bg-background` (Light: `#FFFFFF` | Dark: `#0E1201`)
+- **Foreground**: `text-foreground` (Light: `#000000` | Dark: `#FFFFFF`)
+- **Card Fill**: `bg-card` (Light: `#FFFFFF` | Dark: `#0E1201`)
+- **Borders**: `border-border` (Light: `#EDEDED` | Dark: `rgba(205, 246, 96, 0.2)`)
+- **Primary CTA**: `bg-primary text-primary-foreground` (Light: `#0E1201` on `#FFFFFF` | Dark: `#CDF660` on `#000000`)
+- **Accent Elements**: `bg-accent text-accent-foreground` (Light/Dark: `#CDF660` on `#000000`)
+- **Muted text**: `text-muted-foreground` (Light: `#71726E` | Dark: `#EDEDED`)
+
+---
+
+### B. Typography
+
+Typography is applied automatically to standard semantic tags (`h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `p`, `a`, `input`, `textarea`, `select`) by `global.css` (including fully responsive sizing for mobile and desktop screens).
+
+> [!IMPORTANT]
+> **Typography Inheritance Enforcement**:
+> DO NOT write redundant inline typography overrides (e.g. `text-[44px] md:text-[68px] font-bold font-urbanist`) on standard tags. Let them inherit styles directly from the global stylesheet. Override classes (e.g. `text-brand-dark` or `mt-6`) should only be used for structural, color, or margin offsets. Do not duplicate sizes, line-heights, fonts, or weights.
+
+- **Primary Font**: `Urbanist` (sans-serif fallback) — Used for headings, body copy, and primary navigation elements.
+  - Tailwind: `font-sans` / `font-heading` / `font-urbanist`
+- **Secondary Font**: `Inter` (sans-serif fallback) — Used exclusively for form inputs, textareas, and highly technical or tabular content.
+  - Tailwind: `font-inter`
+
+#### Typographic Hierarchy
+
+| Role                                    | Target Tag / Class  | Mobile (Default)      | Desktop (lg:)         | Weight           |
+| :-------------------------------------- | :------------------ | :-------------------- | :-------------------- | :--------------- |
+| **H1 (Hero Heading)**<br>_(Urbanist)_   | `h1`, `.h1`         | `44px` (LH: `52.8px`) | `76px` (LH: `84px`)   | `500` (medium)   |
+| **H2 (Section Header)**<br>_(Urbanist)_ | `h2`, `.h2`         | `32px` (LH: `38.4px`) | `44px` (LH: `52.8px`) | `600` (semibold) |
+| **H3 (Sub-heading)**<br>_(Urbanist)_    | `h3`, `.h3`         | `26px` (LH: `31.2px`) | `36px` (LH: `43.2px`) | `500` (medium)   |
+| **H4 (Card Header)**<br>_(Urbanist)_    | `h4`, `.h4`         | `22px` (LH: `26.4px`) | `32px` (LH: `38.4px`) | `600` (semibold) |
+| **H5 (Medium Label)**<br>_(Urbanist)_   | `h5`, `.h5`         | `20px` (LH: `24px`)   | `26px` (LH: `31.2px`) | `600` (semibold) |
+| **H6 (Small Header)**<br>_(Urbanist)_   | `h6`, `.h6`         | `18px` (LH: `21.6px`) | `22px` (LH: `26.4px`) | `600` (semibold) |
+| **Body Primary**<br>_(Urbanist)_        | `p`, `.body-text`   | `16px` (LH: `24px`)   | `18px` (LH: `27px`)   | `500` (medium)   |
+| **Standard Links**<br>_(sans-serif)_    | `a`, `.link-text`   | `16px` (LH: Auto)     | `18px` (LH: Auto)     | `400` (normal)   |
+| **Input Fields**<br>_(Inter)_           | `input`, `textarea` | `16px` (LH: `19.2px`) | `16px` (LH: `19.2px`) | `400` (normal)   |
+
+_Note: All line heights are consistently proportional to size (1.2× or 1.5× for body copy). Avoid compressing text vertically._
+
+---
+
+### C. Spacing System
+
+All margins, paddings, and flex/grid gaps must adhere to a **4px base multiple** for absolute precision and scalability:
+
+- `space-x-1` / `space-y-1` (`4px`): Micro offsets, icon-to-text spacing
+- `space-x-2` / `space-y-2` (`8px`): Extremely tight spacing, label-to-input gap
+- `space-x-3` / `space-y-3` (`12px`): Small padding, minor label spacing
+- `space-x-4` / `space-y-4` (`16px`): Standard compact spacing, minor card gaps
+- `space-x-5` / `space-y-5` (`20px`): Moderate component gaps
+- `space-x-6` / `space-y-6` (`24px`): Standard internal padding for smaller components
+- `space-y-8` (`32px`): Standard card internals, standard desktop block spacing
+- `space-y-10` (`40px`): Section elements, large component spacing
+- `space-y-12` (`48px`): Major section separators, desktop spacing rhythm
+- `py-[60px]` (`60px`): Hero section paddings, major section divisions
+- `py-[68px]` (`68px`): Maximized vertical margins for major sections
+
+---
+
+### D. Border Radius Scale
+
+Do not use arbitrary border radius values. Use the scale below:
+
+- **None** (`rounded-none`): Navigation bars, full-width layouts
+- **Subtle / Inputs** (`rounded-[6px]`): Inputs, textareas, small selectors
+- **Standard / Cards** (`rounded-[8px]` / `rounded-lg` / `var(--radius)`): Card containers, featured images
+- **Soft Pill / Buttons** (`rounded-[10px]`): Secondary/ghost buttons
+- **Fully Rounded Pill** (`rounded-[40px]`): Primary CTA buttons, badges, pill indicators, circular icon wrappers
+
+---
+
+### E. Depth & Elevation
+
+Elevation is used sparingly to maintain clean visual boundaries. Prefer solid borders over heavy shadows:
+
+- **Flat (Level 0)**: Solid layouts. Default.
+- **Raised (Level 1)**: `shadow-[0px_2px_4px_rgba(0,0,0,0.08)]` — Used on buttons or elements during hover.
+- **Lifted (Level 2)**: `shadow-[0px_4px_12px_rgba(0,0,0,0.12)]` — Dropdowns, modals, floating action elements.
+
+---
+
+## 3. Core Pre-built Components
+
+Always reuse existing components in `src/components/ui/` rather than re-creating them:
+
+### A. The Button Component (`src/components/ui/button.tsx`)
+
+Usage: `import { Button } from "@/components/ui/button"`
+
+Available variants:
+
+1. `primary` (Default): Backed by `#CDF660` (electric-lime). Heavy rounding (`rounded-[40px]`), font size `18px`. Used for core page-level conversions (e.g. "Get in Touch", "Estimate").
+2. `secondary`: Transparent background, black border (`dark:border-white`), rounded soft (`rounded-[10px]`). Used for secondary navigations.
+3. `tertiary`: Soft gray pill overlay background, fully rounded.
+4. `ghost`: Subtle menu hover highlights.
+5. `link`: Plain text link styling (`text-link-blue hover:underline`).
+
+Sizes:
+
+- `default`: Height `40px`, padding `0px 24px` (`px-6`)
+- `sm`: Height `32px` (`px-4`)
+- `lg`: Height `48px` (`px-8`)
+- `icon`: Square layout (`size-10`)
+
+---
+
+### B. The Input Component (`src/components/ui/input.tsx`)
+
+Usage: `import { Input } from "@/components/ui/input"`
+
+Variants:
+
+- `variant="light"` (Default): For bright backgrounds. Off-white surface, standard neutral border, placeholder `#71726E`.
+- `variant="dark"`: For dark overlays or dark sections. Deep `#0E1201` background, lime border highlight, lime placeholder.
+
+---
+
+## 4. Coding & Implementation Rules
+
+### 1. Visual Integrity & Token Enforcement
+
+- **No Hardcoded Hex Values**: Never type arbitrary inline hex values (e.g. `bg-[#abc]`). You must use the utility classes mapped above (e.g., `bg-electric-lime`, `bg-brand-dark`, `border-light-neutral`).
+- **Mode Compatibility**: When designing layouts, ensure they are fully responsive to dark mode by testing them with both `bg-background` and `text-foreground`.
+- **Accent Contrast Rules**: Do not place Electric Lime (`#CDF660`) text on white or pale backgrounds; it fails contrast checks. Use Electric Lime only as a background with deep-black text (`text-deep-black`) or as high-contrast elements on Brand Dark (`#0E1201`) surfaces.
+
+### 2. Layout & Spacing Discipline
+
+- **Whitespace is deliberate**: Do not pack components together. Ensure standard card container padding is `p-8` (`32px`) and sections are separated by at least `py-12` (`48px`) or `py-[60px]`.
+- **Card Border Norms**: Default card surfaces must have a thin, distinct boundary (`border border-light-neutral dark:border-brand-dark/20`) and standard corner rounding (`rounded-lg`).
+
+### 3. Responsive Scaling Rules
+
+All grids and structures must design from mobile-first upwards:
+
+- **Columns**: desktop 3-columns (`grid-cols-3`) must collapse to 2-columns on tablet (`md:grid-cols-2`) and a single column on mobile (`grid-cols-1`).
+- **Margins**: Section padding must use `px-6` (`30px` side margins) on mobile viewports, scaling up to `lg:px-[60px]` on standard and large desktops.
+- **Header Navigation**: Navigation items collapse to a burger icon below `768px` (tablet). The desktop navigation uses horizontal spacing with `gap-10` (`40px`).
+
+### 4. Interactive Components & Micro-interactions
+
+- All hover states must have active state configurations (e.g., `hover:bg-[#B8E650] active:bg-[#A0D640]` on primary buttons).
+- Use `transition-all duration-200` to prevent jarring snap transitions.
+- Interactive controls must adhere to accessible touch targets: minimum height/width `44px` on mobile screens.
+
+### 5. SEO & Structural Semantics
+
+- Ensure exactly **one** dynamic `<h1>` per page.
+- Heading elements must represent a clean sequential tree (`h1` -> `h2` -> `h3` -> `h4` etc.).
+- Add proper `id` properties to all major section wrappers and buttons for clean browser automation and navigation triggers.
+
+---
+
+## 5. Standard Page Structure & Layout Rules
+
+To ensure HTML validity, clean SEO semantics, and structural consistency across the site:
+
+### A. The Page Layout Flow
+Every page template under `src/pages/` must strictly adhere to the following tag hierarchy:
+```astro
+<Layout title="..." description="...">
+  <main class="page-wrapper">
+    <section id="[unique-section-id]">
+      <!-- Content -->
+    </section>
+  </main>
+</Layout>
+```
+
+### B. Structural Requirements
+1. **Single `<main>` Element**:
+   - `src/layouts/Layout.astro` acts as the document layout shell and **must not** contain any `<main>` tags.
+   - Individual page files are responsible for rendering their own single `<main class="page-wrapper">` element.
+2. **Semantic Section Elements**:
+   - All primary layout blocks inside `<main>` must be wrapped in `<section>` tags.
+   - Every `<section>` tag must contain a descriptive, unique `id` attribute (e.g., `id="about-hero"`, `id="pricing-plans"`).
+3. **Full-Bleed Page Overrides**:
+   - For pages requiring edge-to-edge content (such as `index.astro` containing the `#hero`), use the standard `<main class="page-wrapper">` wrapper.
+   - The top and horizontal paddings are automatically reset to `0` via the CSS selector `.page-wrapper:has(#hero)` inside `global.css`.
+4. **No Client Directives on Astro Components**:
+   - Never append client directives (e.g. `client:load`, `client:visible`) when importing or rendering static Astro components (e.g., `<FAQs />`). Astro components compile down to static HTML and cannot be hydrated in the client browser.

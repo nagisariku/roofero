@@ -1,0 +1,109 @@
+---
+import "../styles/global.css";
+import TopBarLoader from "../components/TopBarLoader";
+import Header from "../components/sections/Header.astro";
+import Footer from "../components/sections/Footer.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Roofero — Premium Roofing & Solar Services Agency",
+  description = "Roofero delivers industry-leading roofing craftsmanship and solar integration. Get a free estimate, transparent project scoping, and durable structural solutions.",
+} = Astro.props;
+
+const canonicalUrl = new URL(Astro.url.pathname, "https://roofero.com").href;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Google Fonts (Urbanist, Inter) loaded asynchronously to prevent render-blocking -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Urbanist:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Urbanist:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+
+    <!-- Preload critical Phosphor Icon woff2 fonts for improved performance -->
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/Phosphor.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/fill/Phosphor-Fill.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <!-- SEO Best Practices -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="https://roofero.com/images/project-roof-upgrade.jpg" />
+    <meta property="og:site_name" content="Roofero" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalUrl} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://roofero.com/images/project-roof-upgrade.jpg" />
+  </head>
+  <body
+    class="bg-background text-foreground antialiased selection:bg-electric-lime selection:text-deep-black"
+  >
+    <!-- React Top Loading Bar (Simulated loader on mount) -->
+    <TopBarLoader client:load />
+
+    <div id="app-root" class="min-h-screen flex flex-col">
+      <Header />
+      <slot />
+      <Footer />
+    </div>
+
+    <!-- Vanilla Lenis smooth scroll initialization -->
+    <script>
+      import Lenis from 'lenis';
+      
+      const lenis = new Lenis({
+        duration: 1.2,
+        lerp: 0.15,
+        infinite: false,
+      });
+
+      function raf(time: number) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
+    </script>
+  </body>
+</html>

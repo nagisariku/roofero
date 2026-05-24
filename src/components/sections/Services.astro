@@ -1,0 +1,110 @@
+---
+import { Button } from "../ui/button";
+---
+
+<section id="services">
+  <div
+    class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-5 gap-12 items-start"
+  >
+    <!-- Left Column (Sticky Label, Title, Button) -->
+    <div
+      class="lg:col-span-2 lg:sticky lg:top-[120px] self-start flex flex-col items-start text-left pt-2"
+    >
+      <span
+        class="text-deep-black font-heading text-base font-semibold border-b border-deep-black pb-1 mb-8"
+      >
+        Service
+      </span>
+      <h2 class="text-deep-black mb-8 max-w-md">
+        Complete home service solutions you can trust
+      </h2>
+      <a href="/services" id="services-cta">
+        <Button
+          variant="secondary"
+          size="lg"
+          className="font-semibold text-deep-black border-deep-black hover:bg-deep-black/5"
+          client:load
+        >
+          Explore More Services
+        </Button>
+      </a>
+    </div>
+
+    <!-- Right Column (Scrolling Cards) -->
+    <div class="lg:col-span-3 flex flex-col gap-10 pb-[150px]">
+      <!-- Card 1 -->
+      <div
+        class="sticky top-[120px] z-10 bg-light-gray rounded-3xl p-8 md:p-10 flex flex-col justify-between min-h-[260px] border border-light-neutral shadow-sm"
+      >
+        <div>
+          <div
+            class="size-12 rounded-full bg-deep-black flex items-center justify-center text-electric-lime mb-8"
+          >
+            <i class="ph ph-house text-[24px]"></i>
+          </div>
+          <div class="max-w-[85%]">
+            <h3 class="h5 text-deep-black mb-3">FlowFix Plumbing</h3>
+            <p class="text-medium-gray body-sm">
+              Reliable and affordable plumbing—leaks, repairs, or replacements,
+              we fix it right the first time.
+            </p>
+          </div>
+        </div>
+        <div
+          class="absolute bottom-8 right-8 md:bottom-10 md:right-10 size-12 rounded-full border border-black/10 flex items-center justify-center text-deep-black hover:bg-black/5 transition-colors cursor-pointer"
+        >
+          <i class="ph ph-arrow-up-right text-[20px]"></i>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div
+        class="sticky top-[220px] z-20 bg-electric-lime rounded-3xl p-8 md:p-10 flex flex-col justify-between min-h-[260px] border border-electric-lime shadow-sm"
+      >
+        <div>
+          <div
+            class="size-12 rounded-full bg-deep-black flex items-center justify-center text-electric-lime mb-8"
+          >
+            <i class="ph ph-lightbulb text-[24px]"></i>
+          </div>
+          <div class="max-w-[85%]">
+            <h3 class="h5 text-deep-black mb-3">Roof Maintenance</h3>
+            <p class="text-deep-black/80 body-sm">
+              Fixing leaks, damage, or wear before they become costly issues.
+            </p>
+          </div>
+        </div>
+        <div
+          class="absolute bottom-8 right-8 md:bottom-10 md:right-10 size-12 rounded-full bg-deep-black flex items-center justify-center text-electric-lime hover:bg-deep-black/90 transition-colors cursor-pointer"
+        >
+          <i class="ph ph-arrow-up-right text-[20px]"></i>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div
+        class="sticky top-[320px] z-30 bg-light-gray rounded-3xl p-8 md:p-10 flex flex-col justify-between min-h-[260px] border border-light-neutral shadow-sm"
+      >
+        <div>
+          <div
+            class="size-12 rounded-full bg-deep-black flex items-center justify-center text-electric-lime mb-8"
+          >
+            <i class="ph ph-wrench text-[24px]"></i>
+          </div>
+          <div class="max-w-[85%]">
+            <h3 class="h5 text-deep-black mb-3">BrightSpark Solutions</h3>
+            <p class="text-medium-gray body-sm">
+              Expert electrical services, reliable solutions, bright results
+              every time.
+            </p>
+          </div>
+        </div>
+        <div
+          class="absolute bottom-8 right-8 md:bottom-10 md:right-10 size-12 rounded-full border border-black/10 flex items-center justify-center text-deep-black hover:bg-black/5 transition-colors cursor-pointer"
+        >
+          <i class="ph ph-arrow-up-right text-[20px]"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

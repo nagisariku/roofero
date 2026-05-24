@@ -1,0 +1,71 @@
+---
+import { Button } from "../ui/button";
+---
+
+<section
+  id="hero"
+  class="bg-brand-dark text-white min-h-[820px] md:min-h-[900px] pt-[120px] pb-[200px] px-6 md:px-[60px] flex items-center relative overflow-hidden"
+>
+  <!-- Hero background image (electrician/worker) positioned on the right side -->
+  <div
+    class="absolute right-0 top-0 bottom-0 w-full md:w-[50%] h-full pointer-events-none z-0"
+  >
+    <div class="relative w-full h-full">
+      <img
+        src="/images/hero-worker.jpg"
+        alt="Roofero Hero Technician"
+        class="w-full h-full object-cover object-center opacity-85"
+        loading="eager"
+        fetchpriority="high"
+      />
+      <!-- Subtle dark gradient shading for readability -->
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/40 to-transparent"
+      >
+      </div>
+    </div>
+  </div>
+
+  <!-- Fallback / additional left shade for smaller screens to make text readable -->
+  <div
+    class="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/85 md:via-brand-dark/35 to-transparent z-0 pointer-events-none"
+  >
+  </div>
+
+  <div class="max-w-[1440px] mx-auto w-full relative z-10">
+    <div class="max-w-2xl text-left">
+      <!-- Heading H1 -->
+      <h1 class="text-white tracking-tight mb-6">
+        Trusted Experts<br />for Home Repairs
+      </h1>
+
+      <p class="text-white/80 max-w-lg mb-10">
+        Reliable roofing solutions built to last — safeguarding your home with
+        expert craftsmanship and lasting quality.
+      </p>
+
+      <div class="flex flex-wrap gap-4 items-center">
+        <a href="/pricing">
+          <Button
+            variant="primary"
+            size="lg"
+            className="font-semibold"
+            client:load
+          >
+            Get a Free Estimate
+          </Button>
+        </a>
+        <a href="tel:+15550199">
+          <Button
+            variant="secondary"
+            size="lg"
+            className="rounded-full font-semibold text-white border-white/30 hover:border-white hover:bg-white/10 bg-transparent"
+            client:load
+          >
+            Call Us Today
+          </Button>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,180 @@
+---
+
+---
+
+<section id="client-feedback">
+  <div class="max-w-[1440px] mx-auto flex flex-col items-center text-center">
+    <!-- Section Header -->
+    <span
+      class="text-foreground font-heading text-base font-semibold border-b border-foreground pb-1 mb-8 inline-block"
+    >
+      Client Feedback
+    </span>
+    <h2 class="text-foreground max-w-3xl mb-16">
+      Client stories that inspire trust and confidence
+    </h2>
+
+    <!-- Slider Wrapper -->
+    <div
+      class="relative w-full max-w-[1440px] bg-light-gray dark:bg-brand-dark/50 rounded-lg border border-border overflow-hidden shadow-sm"
+    >
+      <!-- Slide 1 (James M.) -->
+      <div
+        class="testimonial-slide flex flex-col md:flex-row w-full md:h-[580px] transition-all duration-500 ease-in-out"
+        data-index="0"
+      >
+        <!-- Image Side -->
+        <div
+          class="w-full md:w-1/2 aspect-[4/3] md:aspect-auto md:h-full overflow-hidden relative"
+        >
+          <img
+            src="/images/client-consultation.jpg"
+            alt="Consultation session with client"
+            class="absolute inset-0 w-full h-full object-cover object-center"
+          />
+        </div>
+        <!-- Content Side -->
+        <div
+          class="w-full md:w-1/2 p-8 md:p-12 lg:p-16 flex flex-col justify-between items-start text-left min-h-[380px] md:h-full"
+        >
+          <div>
+            <span
+              class="text-medium-gray font-heading text-xs uppercase tracking-wider font-semibold"
+              >Reviews</span
+            >
+            <h3 class="h4 text-foreground mt-4 mb-6 leading-tight">
+              "Efficient team timely delivery exceptional roofing results"
+            </h3>
+            <p class="text-muted-foreground body-sm">
+              "From first consultation to final inspection, the team was
+              punctual, transparent, and highly skilled. Excellent workmanship
+              and communication every step of the way. Couldn't be happier with
+              the outcome."
+            </p>
+          </div>
+
+          <div class="w-full mt-8">
+            <!-- Profile Info -->
+            <div class="mb-6">
+              <p class="h6 font-semibold text-foreground mb-0">James M.</p>
+              <p class="text-muted-foreground text-sm">Homeowner</p>
+            </div>
+            <!-- Navigation Buttons -->
+            <div class="flex gap-3">
+              <button
+                class="testimonial-prev flex items-center justify-center size-12 rounded-full border border-border hover:border-foreground/35 hover:bg-foreground/5 transition-all cursor-pointer text-foreground"
+                aria-label="Previous review"
+              >
+                <i class="ph ph-arrow-down-left text-[20px]"></i>
+              </button>
+              <button
+                class="testimonial-next flex items-center justify-center size-12 rounded-full border border-border hover:border-foreground/35 hover:bg-foreground/5 transition-all cursor-pointer text-foreground"
+                aria-label="Next review"
+              >
+                <i class="ph ph-arrow-up-right text-[20px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 (Sandra T.) -->
+      <div
+        class="testimonial-slide flex flex-col md:flex-row w-full md:h-[580px] transition-all duration-500 ease-in-out hidden opacity-0"
+        data-index="1"
+      >
+        <!-- Image Side -->
+        <div
+          class="w-full md:w-1/2 aspect-[4/3] md:aspect-auto md:h-full overflow-hidden relative"
+        >
+          <img
+            src="/images/client-testimonial.jpg"
+            alt="Sandra T. review video screenshot"
+            class="absolute inset-0 w-full h-full object-cover object-center"
+          />
+        </div>
+        <!-- Content Side -->
+        <div
+          class="w-full md:w-1/2 p-8 md:p-12 lg:p-16 flex flex-col justify-between items-start text-left min-h-[380px] md:h-full"
+        >
+          <div>
+            <span
+              class="text-medium-gray font-heading text-xs uppercase tracking-wider font-semibold"
+              >Reviews</span
+            >
+            <h3 class="h4 text-foreground mt-4 mb-6 leading-tight">
+              "Quick response proven reliability trusted roofing excellence"
+            </h3>
+            <p class="text-muted-foreground body-sm">
+              "Professional service from start to finish, with clear advance
+              connected flawless with execution, attention detail commitment to
+              complete customer satisfaction for your delivered commitment to
+              complete customer satisfaction."
+            </p>
+          </div>
+
+          <div class="w-full mt-8">
+            <!-- Profile Info -->
+            <div class="mb-6">
+              <p class="h6 font-semibold text-foreground mb-0">Sandra T.</p>
+              <p class="text-muted-foreground text-sm">Property Manager</p>
+            </div>
+            <!-- Navigation Buttons -->
+            <div class="flex gap-3">
+              <button
+                class="testimonial-prev flex items-center justify-center size-12 rounded-full border border-border hover:border-foreground/35 hover:bg-foreground/5 transition-all cursor-pointer text-foreground"
+                aria-label="Previous review"
+              >
+                <i class="ph ph-arrow-down-left text-[20px]"></i>
+              </button>
+              <button
+                class="testimonial-next flex items-center justify-center size-12 rounded-full border border-border hover:border-foreground/35 hover:bg-foreground/5 transition-all cursor-pointer text-foreground"
+                aria-label="Next review"
+              >
+                <i class="ph ph-arrow-up-right text-[20px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Slider Client Script -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const slides = document.querySelectorAll(".testimonial-slide");
+    const prevBtns = document.querySelectorAll(".testimonial-prev");
+    const nextBtns = document.querySelectorAll(".testimonial-next");
+    let currentSlide = 0;
+
+    function showSlide(index: number) {
+      slides.forEach((slide, i) => {
+        if (i === index) {
+          slide.classList.remove("hidden");
+          // Trigger reflow for transition
+          void (slide as HTMLElement).offsetWidth;
+          slide.classList.remove("opacity-0");
+        } else {
+          slide.classList.add("hidden");
+          slide.classList.add("opacity-0");
+        }
+      });
+    }
+
+    prevBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+      });
+    });
+
+    nextBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      });
+    });
+  });
+</script>
