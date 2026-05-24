@@ -9,8 +9,10 @@ import FAQs from "@/components/sections/FAQs.astro";
   description="Ready to protect your property? Contact Roofero's roofing and solar experts to get a free estimate. We respond within 24 hours to schedule your inspection ✓"
 >
   <main class="page-wrapper">
-    <div class="max-w-[1440px] mx-auto flex flex-col gap-16">
-      <section id="contact-form-section" class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+    <section id="contact-form-section" class="section-wrapper">
+      <div
+        class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start"
+      >
         <div class="text-left pt-2">
           <!-- Label -->
           <span
@@ -46,10 +48,12 @@ import FAQs from "@/components/sections/FAQs.astro";
         <div class="w-full">
           <ContactForm client:load />
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Google Maps Section -->
-      <section id="contact-map" class="w-full py-20 md:py-32">
+    <!-- Google Maps Section -->
+    <section id="contact-map" class="section-wrapper pb-0">
+      <div class="max-w-[1440px] mx-auto">
         <div
           class="w-full h-[500px] md:h-[800px] rounded-lg overflow-hidden border border-border shadow-sm"
         >
@@ -64,11 +68,13 @@ import FAQs from "@/components/sections/FAQs.astro";
             class="grayscale dark:invert contrast-[1.1] brightness-[0.9] dark:opacity-80"
           ></iframe>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="contact-faqs">
+    <section id="contact-faqs" class="section-wrapper">
+      <div class="max-w-[1440px] mx-auto">
         <FAQs />
-      </section>
-    </div>
+      </div>
+    </section>
   </main>
 </Layout>

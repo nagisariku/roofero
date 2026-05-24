@@ -56,16 +56,25 @@
   >
     <!-- 4-Column Grid -->
     <div
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16"
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16"
     >
       <!-- Column 1: Company -->
       <div class="flex flex-col items-start text-left">
-        <p class="h6 text-white mb-6 font-semibold">Company</p>
+        <p class="h6 text-white mb-4 font-semibold">Company</p>
+        <p class="text-white/60 font-sans text-sm mb-6 leading-relaxed max-w-sm">
+          Roofero is a premier provider of certified roofing and home repair services. We deliver high-quality craftsmanship, reliable solutions, and lasting protection.
+        </p>
         <ul class="space-y-3 font-sans text-base text-white/60">
-          <li>123 Roofline Ave City</li>
-          <li>State ZIP</li>
-          <li>(123) 456-7890</li>
-          <li>
+          <li class="flex items-center gap-2">
+            <i class="ph ph-map-pin text-[18px] text-electric-lime shrink-0"></i>
+            <span>123 Roofline Ave City, State ZIP</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <i class="ph ph-phone text-[18px] text-electric-lime shrink-0"></i>
+            <span>(123) 456-7890</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <i class="ph ph-envelope text-[18px] text-electric-lime shrink-0"></i>
             <a
               href="mailto:contact@rofoora.com"
               class="hover:text-electric-lime transition-colors"
@@ -85,9 +94,10 @@
               href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
-              class="text-white/60 hover:text-electric-lime transition-colors"
+              class="text-white/60 hover:text-electric-lime transition-colors flex items-center gap-2"
             >
-              Facebook
+              <i class="ph ph-facebook-logo text-[18px] text-electric-lime"></i>
+              <span>Facebook</span>
             </a>
           </li>
           <li>
@@ -95,9 +105,10 @@
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              class="text-white/60 hover:text-electric-lime transition-colors"
+              class="text-white/60 hover:text-electric-lime transition-colors flex items-center gap-2"
             >
-              Instagram
+              <i class="ph ph-instagram-logo text-[18px] text-electric-lime"></i>
+              <span>Instagram</span>
             </a>
           </li>
           <li>
@@ -105,9 +116,10 @@
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              class="text-white/60 hover:text-electric-lime transition-colors"
+              class="text-white/60 hover:text-electric-lime transition-colors flex items-center gap-2"
             >
-              Linkedin
+              <i class="ph ph-linkedin-logo text-[18px] text-electric-lime"></i>
+              <span>Linkedin</span>
             </a>
           </li>
           <li>
@@ -115,86 +127,16 @@
               href="https://hotstar.com"
               target="_blank"
               rel="noopener noreferrer"
-              class="text-white/60 hover:text-electric-lime transition-colors"
+              class="text-white/60 hover:text-electric-lime transition-colors flex items-center gap-2"
             >
-              Hotstar
+              <i class="ph ph-globe text-[18px] text-electric-lime"></i>
+              <span>Hotstar</span>
             </a>
           </li>
         </ul>
       </div>
 
-      <!-- Column 3: Quick Links -->
-      <div class="flex flex-col items-start text-left">
-        <p class="h6 text-white mb-6 font-semibold">Quick Links</p>
-        <ul class="grid grid-cols-1 gap-3 font-sans text-base">
-          <li>
-            <a
-              href="/"
-              class="text-electric-lime underline decoration-electric-lime underline-offset-4 hover:text-electric-lime-hover transition-colors font-medium"
-            >
-              Home
-            </a>
-          </li>
-          <li>
-            <a
-              href="/about-us"
-              class="text-white/60 hover:text-electric-lime transition-colors"
-            >
-              About Us
-            </a>
-          </li>
-          <li>
-            <a
-              href="/services"
-              class="text-white/60 hover:text-electric-lime transition-colors"
-            >
-              Services
-            </a>
-          </li>
-          <li>
-            <a
-              href="/projects"
-              class="text-white/60 hover:text-electric-lime transition-colors"
-            >
-              Projects
-            </a>
-          </li>
-          <li>
-            <a
-              href="/pricing"
-              class="text-white/60 hover:text-electric-lime transition-colors"
-            >
-              Pricing
-            </a>
-          </li>
-          <li>
-            <a
-              href="/contact-us"
-              class="text-white/60 hover:text-electric-lime transition-colors"
-            >
-              Contact
-            </a>
-          </li>
-          <li>
-            <a
-              href="/privacy-policy"
-              class="text-white/60 hover:text-electric-lime transition-colors"
-            >
-              Privacy Policy
-            </a>
-          </li>
-          <li>
-            <a
-              href="/terms-of-service"
-              class="text-white/60 hover:text-electric-lime transition-colors"
-            >
-              Terms of Service
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Column 4: Newsletter -->
+      <!-- Column 3: Newsletter -->
       <div class="flex flex-col items-start text-left">
         <p class="h6 text-white mb-6 font-semibold">Subscribe Our Newsletter</p>
 
@@ -219,6 +161,22 @@
           Reliable roofing solutions built to safeguarding your home expert
           craftsmanship.
         </p>
+      </div>
+    </div>
+
+    <!-- Footer Bottom Bar (Privacy & Terms) -->
+    <div class="border-t border-white/10 mt-16 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-white/50 font-sans text-sm">
+        © 2026 Roofero. All rights reserved.
+      </p>
+      <div class="flex items-center gap-6 text-sm font-sans text-white/50">
+        <a href="/privacy-policy" class="hover:text-electric-lime transition-colors hover:no-underline">
+          Privacy Policy
+        </a>
+        <span class="text-white/20 select-none">|</span>
+        <a href="/terms-of-service" class="hover:text-electric-lime transition-colors hover:no-underline">
+          Terms of Service
+        </a>
       </div>
     </div>
   </div>

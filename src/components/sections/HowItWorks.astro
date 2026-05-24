@@ -29,11 +29,11 @@ import { Button } from "../ui/button";
 
     <!-- Steps Grid (3x2 flat grid on desktop) -->
     <div
-      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-[3fr_3fr_4fr] gap-6 md:gap-8 w-full"
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[3fr_3fr_4fr] gap-6 md:gap-8 w-full"
     >
       <!-- Card 1 -->
       <div
-        class="bg-electric-lime rounded-lg p-8 md:p-10 flex flex-col justify-between aspect-square border border-electric-lime shadow-sm text-deep-black"
+        class="bg-electric-lime rounded-lg p-8 md:p-10 flex flex-col min-h-[260px] md:min-h-auto justify-between sm:aspect-square border border-electric-lime shadow-sm text-deep-black"
       >
         <div>
           <div
@@ -53,7 +53,7 @@ import { Button } from "../ui/button";
 
       <!-- Card 2 -->
       <div
-        class="bg-light-gray dark:bg-brand-dark/50 rounded-lg p-8 md:p-10 flex flex-col justify-between aspect-square border border-border shadow-sm text-foreground"
+        class="bg-light-gray dark:bg-brand-dark/50 rounded-lg p-8 md:p-10 flex flex-col min-h-[260px] md:min-h-auto justify-between sm:aspect-square border border-border shadow-sm text-foreground"
       >
         <div>
           <div
@@ -71,11 +71,11 @@ import { Button } from "../ui/button";
       </div>
 
       <!-- Empty Cell Row 1 Col 3 (Hidden on Mobile/Tablet) -->
-      <div class="hidden md:block pointer-events-none"></div>
+      <div class="hidden lg:block pointer-events-none"></div>
 
       <!-- Card 3 -->
       <div
-        class="bg-light-gray dark:bg-brand-dark/50 rounded-lg p-8 md:p-10 flex flex-col justify-between aspect-square border border-border shadow-sm text-foreground"
+        class="bg-light-gray dark:bg-brand-dark/50 rounded-lg p-8 md:p-10 flex flex-col min-h-[260px] md:min-h-auto justify-between sm:aspect-square border border-border shadow-sm text-foreground"
       >
         <div>
           <div
@@ -94,7 +94,7 @@ import { Button } from "../ui/button";
       </div>
 
       <!-- Empty Cell Row 2 Col 2 (Hidden on Mobile/Tablet) -->
-      <div class="hidden md:block pointer-events-none"></div>
+      <div class="hidden lg:block pointer-events-none"></div>
 
       <!-- Handshake Image Cell -->
       <div

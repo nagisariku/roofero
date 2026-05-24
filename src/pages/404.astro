@@ -1,0 +1,38 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Button } from "../components/ui/button";
+---
+
+<Layout
+  title="Page Not Found — 404 | Roofero"
+  description="The page you are looking for was not found on Roofero. Return to our homepage to explore our roofing and home repair services."
+>
+  <main class="page-wrapper">
+    <section class="section-wrapper min-h-[60vh] flex flex-col items-center justify-center text-center">
+      <div class="max-w-md mx-auto flex flex-col items-center">
+        <!-- Phosphor Icon Container -->
+        <div class="size-20 rounded-full bg-electric-lime/10 border border-electric-lime/20 flex items-center justify-center text-electric-lime mb-6">
+          <i class="ph ph-warning-circle text-[40px]"></i>
+        </div>
+        
+        <h1 class="font-heading font-bold text-foreground tracking-tight mb-2">
+          404
+        </h1>
+        
+        <h2 class="h4 text-foreground font-semibold mb-4">
+          Oops! Page Not Found
+        </h2>
+        
+        <p class="text-muted-foreground body-sm mb-8 leading-relaxed">
+          The page you are looking for might have been removed, had its name changed, or is temporarily unavailable. Let's get you back on track.
+        </p>
+        
+        <a href="/" class="hover:no-underline">
+          <Button variant="primary" size="lg" className="font-semibold" client:load>
+            Back to Home
+          </Button>
+        </a>
+      </div>
+    </section>
+  </main>
+</Layout>

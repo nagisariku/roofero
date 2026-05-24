@@ -275,16 +275,22 @@
 
 /* Custom block component */
 .page-wrapper {
-  @apply min-h-screen flex-grow bg-background pt-28 md:pt-36 pb-20 md:pb-[120px] px-6 lg:px-[60px] w-full;
+  @apply min-h-screen flex-grow bg-background pt-28 md:pt-36 pb-20 md:pb-[120px]  w-full;
 }
 
-.page-wrapper:has(#hero) {
+.page-wrapper:has(> .section-wrapper:first-child),
+.page-wrapper:has(> #hero) {
   @apply pt-0 px-0 pb-0;
 }
 
 .section-wrapper {
-  @apply bg-background py-20 md:py-32 px-6 md:px-[60px];
+  @apply bg-background py-20 md:py-32 px-6 lg:px-[60px];
 }
+
+.section-wrapper-full {
+  @apply bg-background py-20 md:py-32;
+}
+
 
 /* Custom CSS utilities for Lenis smooth scroll */
 html.lenis, html.lenis body {

@@ -1,5 +1,6 @@
 ---
 import { Button } from "../ui/button";
+import MobileMenu from "./MobileMenu";
 
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.replace(/\/$/, "");
@@ -14,60 +15,70 @@ const currentPath = pathname.replace(/\/$/, "");
   >
     <a href="/" class="flex items-center gap-2 hover:no-underline">
       <div
-        class="size-10 bg-electric-lime rounded-full flex items-center justify-center text-deep-black"
+        class="md:size-10 size-8 bg-electric-lime rounded-full flex items-center justify-center text-deep-black"
       >
-        <i class="ph-fill ph-leaf text-[28px]"></i>
+        <i class="ph-fill ph-leaf text-[18px] md:text-[28px]"></i>
       </div>
-      <span class="font-heading text-2xl font-semibold text-white"
+      <span class="font-heading text-xl md:text-2xl font-semibold text-white"
         >Roofero</span
       >
     </a>
 
-    <nav id="main-nav" class="hidden md:flex items-center gap-10">
+    <nav id="main-nav" class="hidden lg:flex items-center gap-10">
       <a
         href="/"
         id="nav-link-hero"
-        class={currentPath === "" ? "text-electric-lime font-sans text-lg font-normal transition-colors hover:no-underline" : "text-white hover:text-electric-lime font-sans text-lg font-normal transition-colors hover:no-underline"}
+        class={currentPath === ""
+          ? "text-electric-lime font-sans text-lg font-normal transition-colors hover:no-underline"
+          : "text-white hover:text-electric-lime font-sans text-lg font-normal transition-colors hover:no-underline"}
         >Home</a
       >
       <a
         href="/pricing"
         id="nav-link-pricing"
-        class={currentPath === "/pricing" ? "text-electric-lime font-sans text-lg font-normal transition-colors hover:no-underline" : "text-white hover:text-electric-lime font-sans text-lg font-normal transition-colors hover:no-underline"}
+        class={currentPath === "/pricing"
+          ? "text-electric-lime font-sans text-lg font-normal transition-colors hover:no-underline"
+          : "text-white hover:text-electric-lime font-sans text-lg font-normal transition-colors hover:no-underline"}
         >Pricing</a
       >
       <a
         href="/about-us"
         id="nav-link-about"
-        class={currentPath === "/about-us" ? "text-electric-lime font-sans text-lg font-normal transition-colors hover:no-underline" : "text-white hover:text-electric-lime font-sans text-lg font-normal transition-colors hover:no-underline"}
+        class={currentPath === "/about-us"
+          ? "text-electric-lime font-sans text-lg font-normal transition-colors hover:no-underline"
+          : "text-white hover:text-electric-lime font-sans text-lg font-normal transition-colors hover:no-underline"}
         >About Us</a
       >
       <a
         href="/services"
         id="nav-link-services"
-        class={currentPath === "/services" ? "text-electric-lime font-sans text-lg font-normal transition-colors hover:no-underline" : "text-white hover:text-electric-lime font-sans text-lg font-normal transition-colors hover:no-underline"}
+        class={currentPath === "/services"
+          ? "text-electric-lime font-sans text-lg font-normal transition-colors hover:no-underline"
+          : "text-white hover:text-electric-lime font-sans text-lg font-normal transition-colors hover:no-underline"}
         >Services</a
       >
       <a
         href="/projects"
         id="nav-link-projects"
-        class={currentPath === "/projects" ? "text-electric-lime font-sans text-lg font-normal transition-colors hover:no-underline" : "text-white hover:text-electric-lime font-sans text-lg font-normal transition-colors hover:no-underline"}
+        class={currentPath === "/projects"
+          ? "text-electric-lime font-sans text-lg font-normal transition-colors hover:no-underline"
+          : "text-white hover:text-electric-lime font-sans text-lg font-normal transition-colors hover:no-underline"}
         >Projects</a
       >
     </nav>
 
-    <div>
+    <div class="flex items-center gap-3 md:gap-0">
       <a href="/contact-us" id="header-cta">
         <Button
           variant="primary"
           size="lg"
-          className="px-6 font-semibold"
+          className="px-4 md:px-6 font-semibold"
           client:load
         >
           Get In Touch
         </Button>
       </a>
+      <MobileMenu client:load currentPath={currentPath} />
     </div>
   </div>
 </header>
-

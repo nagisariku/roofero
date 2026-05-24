@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button";
   description="Learn about Roofero's heritage, certified roofing expertise, and commitment to quality. Meet our elite team of craftsmen and explore our core values. Learn more ✓"
 >
   <main class="page-wrapper">
-    <section id="about-hero">
+    <section id="about-hero" class="section-wrapper">
       <div class="max-w-[1440px] mx-auto flex flex-col">
         <!-- Grid section for Story Details -->
         <div class="grid grid-cols-1 gap-8 lg:gap-12 items-start">
@@ -215,7 +215,7 @@ import { Button } from "@/components/ui/button";
     <section id="about-services" class="section-wrapper"><Services /></section>
 
     <!-- Flexible Pricing Section -->
-    <section id="about-pricing" class="bg-background py-16 md:py-[68px] w-full">
+    <section id="about-pricing" class="section-wrapper">
       <div class="max-w-[1440px] mx-auto flex flex-col gap-12 md:gap-16">
         <!-- Section Header -->
         <div
@@ -375,7 +375,7 @@ import { Button } from "@/components/ui/button";
     </section>
 
     <!-- Our Values Section -->
-    <section id="about-values" class="bg-background py-16 md:py-[68px] w-full">
+    <section id="about-values" class="section-wrapper">
       <div class="max-w-[1440px] mx-auto flex flex-col gap-12 md:gap-16">
         <!-- Section Header -->
         <div class="flex flex-col items-start gap-4">
@@ -471,8 +471,8 @@ import { Button } from "@/components/ui/button";
     </section>
 
     <!-- Our Team Section -->
-    <section id="about-team" class="bg-background py-16 md:py-[68px] w-full">
-      <div class="max-w-[1440px] mx-auto flex flex-col gap-8">
+    <section id="about-team" class="section-wrapper-full">
+      <div class="max-w-[1440px] mx-auto flex flex-col gap-8 px-6 lg:px-[60px]">
         <!-- Section Header -->
         <div class="flex flex-col items-start gap-4">
           <span
@@ -491,7 +491,9 @@ import { Button } from "@/components/ui/button";
       <TeamCarousel client:visible />
     </section>
 
-    <section id="about-feedback" class="section-wrapper"><ClientFeedback /></section>
+    <section id="about-feedback" class="section-wrapper">
+      <ClientFeedback />
+    </section>
   </main>
 
   <!-- Client-side script to coordinate pricing row hovered image change -->

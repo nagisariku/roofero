@@ -8,7 +8,10 @@ import Layout from "../layouts/Layout.astro";
 >
   <main class="page-wrapper">
     <!-- Header Section -->
-    <section id="pricing-header" class="text-center mb-16 animate-fade-in">
+    <section
+      id="pricing-header"
+      class="section-wrapper text-center animate-fade-in"
+    >
       <a
         href="#pricing-plans"
         class="text-[13px] md:text-sm font-semibold border-b border-foreground pb-0.5 tracking-wider inline-block text-foreground hover:opacity-85 transition-opacity duration-300"
@@ -19,971 +22,978 @@ import Layout from "../layouts/Layout.astro";
     </section>
 
     <!-- Pricing Cards Grid -->
-    <section id="pricing-plans" class="max-w-[1040px] mx-auto px-6 md:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-        <!-- Basic Plan Card -->
-        <div
-          class="bg-light-neutral rounded-[24px] p-8 md:p-10 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-black/5"
-        >
-          <div>
-            <h4 class="text-brand-dark">Basic Plan</h4>
-            <p class="body-sm text-medium-gray mt-3">
-              Our Basic Plan covers essential roof inspection and best for
-              maintenance to prevent costly repairs.
-            </p>
+    <section id="pricing-plans" class="section-wrapper">
+      <div class="max-w-[1040px] mx-auto flex flex-col gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Basic Plan Card -->
+          <div
+            class="bg-light-neutral rounded-[24px] p-8 md:p-10 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-black/5"
+          >
+            <div>
+              <h4 class="text-brand-dark">Basic Plan</h4>
+              <p class="body-sm text-medium-gray mt-3">
+                Our Basic Plan covers essential roof inspection and best for
+                maintenance to prevent costly repairs.
+              </p>
 
-            <div class="flex items-baseline mt-6 mb-3">
-              <span
-                class="text-[44px] md:text-[52px] font-bold font-urbanist text-brand-dark leading-none"
-                >$299</span
+              <div class="flex items-baseline mt-6 mb-3">
+                <span
+                  class="text-[44px] md:text-[52px] font-bold font-urbanist text-brand-dark leading-none"
+                  >$299</span
+                >
+                <span class="text-sm font-semibold text-medium-gray ml-1"
+                  >/month</span
+                >
+              </div>
+
+              <div class="w-full h-[1px] bg-black/10 my-6"></div>
+
+              <button
+                class="w-full py-3.5 px-6 rounded-[8px] bg-transparent border border-black/15 text-deep-black font-semibold text-sm tracking-wide transition-all duration-300 hover:bg-black/[0.03] hover:border-black/30 cursor-pointer text-center"
               >
-              <span class="text-sm font-semibold text-medium-gray ml-1"
-                >/month</span
-              >
+                Get Started
+              </button>
+
+              <!-- Features List -->
+              <ul class="mt-8 space-y-4">
+                <li class="flex items-center gap-3">
+                  <svg
+                    class="w-[18px] h-[18px] text-foreground shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                    ></path>
+                  </svg>
+                  <span class="body-sm font-semibold text-brand-dark"
+                    >Minor Repairs Included</span
+                  >
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg
+                    class="w-[18px] h-[18px] text-foreground shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                    ></path>
+                  </svg>
+                  <span class="body-sm font-semibold text-brand-dark"
+                    >Gutter Cleaning</span
+                  >
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg
+                    class="w-[18px] h-[18px] text-foreground shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                    ></path>
+                  </svg>
+                  <span class="body-sm font-semibold text-brand-dark"
+                    >1-Year Service Warranty</span
+                  >
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg
+                    class="w-[18px] h-[18px] text-foreground shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                    ></path>
+                  </svg>
+                  <span class="body-sm font-semibold text-brand-dark"
+                    >Minor Moderate Repairs</span
+                  >
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg
+                    class="w-[18px] h-[18px] text-foreground shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                    ></path>
+                  </svg>
+                  <span class="body-sm font-semibold text-brand-dark"
+                    >Roof Inspection & Maintenance</span
+                  >
+                </li>
+              </ul>
             </div>
+          </div>
 
-            <div class="w-full h-[1px] bg-black/10 my-6"></div>
+          <!-- Premium Plan Card -->
+          <div
+            class="bg-light-neutral rounded-[24px] p-8 md:p-10 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-black/5"
+          >
+            <div>
+              <h4 class="text-brand-dark">Premium Plan</h4>
+              <p class="body-sm text-medium-gray mt-3">
+                Our Premium Plan covers essential roof inspection and best for
+                maintenance to prevent costly repairs.
+              </p>
 
-            <button
-              class="w-full py-3.5 px-6 rounded-[8px] bg-transparent border border-black/15 text-deep-black font-semibold text-sm tracking-wide transition-all duration-300 hover:bg-black/[0.03] hover:border-black/30 cursor-pointer text-center"
-            >
-              Get Started
-            </button>
+              <div class="flex items-baseline mt-6 mb-3">
+                <span
+                  class="text-[44px] md:text-[52px] font-bold font-urbanist text-brand-dark leading-none"
+                  >$1,099</span
+                >
+                <span class="text-sm font-semibold text-medium-gray ml-1"
+                  >/month</span
+                >
+              </div>
 
-            <!-- Features List -->
-            <ul class="mt-8 space-y-4">
-              <li class="flex items-center gap-3">
-                <svg
-                  class="w-[18px] h-[18px] text-foreground shrink-0"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                  ></path>
-                </svg>
-                <span class="body-sm font-semibold text-brand-dark"
-                  >Minor Repairs Included</span
-                >
-              </li>
-              <li class="flex items-center gap-3">
-                <svg
-                  class="w-[18px] h-[18px] text-foreground shrink-0"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                  ></path>
-                </svg>
-                <span class="body-sm font-semibold text-brand-dark"
-                  >Gutter Cleaning</span
-                >
-              </li>
-              <li class="flex items-center gap-3">
-                <svg
-                  class="w-[18px] h-[18px] text-foreground shrink-0"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                  ></path>
-                </svg>
-                <span class="body-sm font-semibold text-brand-dark"
-                  >1-Year Service Warranty</span
-                >
-              </li>
-              <li class="flex items-center gap-3">
-                <svg
-                  class="w-[18px] h-[18px] text-foreground shrink-0"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                  ></path>
-                </svg>
-                <span class="body-sm font-semibold text-brand-dark"
-                  >Minor Moderate Repairs</span
-                >
-              </li>
-              <li class="flex items-center gap-3">
-                <svg
-                  class="w-[18px] h-[18px] text-foreground shrink-0"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                  ></path>
-                </svg>
-                <span class="body-sm font-semibold text-brand-dark"
-                  >Roof Inspection & Maintenance</span
-                >
-              </li>
-            </ul>
+              <!-- Spacer to align the Premium Plan button with Basic Plan button perfectly -->
+              <div class="w-full h-[1px] bg-transparent my-6"></div>
+
+              <button
+                class="w-full py-3.5 px-6 rounded-[8px] bg-brand-dark text-white font-semibold text-sm tracking-wide transition-all duration-300 hover:bg-deep-black cursor-pointer text-center"
+              >
+                Get Started
+              </button>
+
+              <!-- Features List -->
+              <ul class="mt-8 space-y-4">
+                <li class="flex items-center gap-3">
+                  <svg
+                    class="w-[18px] h-[18px] text-foreground shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                    ></path>
+                  </svg>
+                  <span class="body-sm font-semibold text-brand-dark"
+                    >Full Roof Inspection & Maintenance</span
+                  >
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg
+                    class="w-[18px] h-[18px] text-foreground shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                    ></path>
+                  </svg>
+                  <span class="body-sm font-semibold text-brand-dark"
+                    >All Repairs Included (Minor to Major)</span
+                  >
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg
+                    class="w-[18px] h-[18px] text-foreground shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                    ></path>
+                  </svg>
+                  <span class="body-sm font-semibold text-brand-dark"
+                    >Gutter, Downspout & Flashing Service</span
+                  >
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg
+                    class="w-[18px] h-[18px] text-foreground shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                    ></path>
+                  </svg>
+                  <span class="body-sm font-semibold text-brand-dark"
+                    >Priority Scheduling</span
+                  >
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg
+                    class="w-[18px] h-[18px] text-foreground shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                    ></path>
+                  </svg>
+                  <span class="body-sm font-semibold text-brand-dark"
+                    >5-Year Service Warranty</span
+                  >
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
-        <!-- Premium Plan Card -->
+        <!-- Personalized Care Banner -->
         <div
-          class="bg-light-neutral rounded-[24px] p-8 md:p-10 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-black/5"
+          id="pricing-care"
+          class="bg-light-neutral rounded-[24px] p-8 md:p-10 transition-all duration-300 hover:shadow-xl hover:shadow-black/5"
         >
-          <div>
-            <h4 class="text-brand-dark">Premium Plan</h4>
-            <p class="body-sm text-medium-gray mt-3">
-              Our Premium Plan covers essential roof inspection and best for
-              maintenance to prevent costly repairs.
-            </p>
-
-            <div class="flex items-baseline mt-6 mb-3">
-              <span
-                class="text-[44px] md:text-[52px] font-bold font-urbanist text-brand-dark leading-none"
-                >$1,099</span
+          <div
+            class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8"
+          >
+            <div class="flex-1">
+              <h3 class="text-brand-dark">Personalized Care</h3>
+              <p class="body-sm text-medium-gray mt-3 max-w-[620px]">
+                We provide roofing solutions customized to meet your unique
+                needs perfectly.
+              </p>
+              <ul
+                class="mt-6 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8"
               >
-              <span class="text-sm font-semibold text-medium-gray ml-1"
-                >/month</span
-              >
+                <li class="flex items-center gap-3">
+                  <svg
+                    class="w-[18px] h-[18px] text-foreground shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                    ></path>
+                  </svg>
+                  <span class="body-sm font-semibold text-brand-dark"
+                    >All the Services Listed Above</span
+                  >
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg
+                    class="w-[18px] h-[18px] text-foreground shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                    ></path>
+                  </svg>
+                  <span class="body-sm font-semibold text-brand-dark"
+                    >24/7 Expert Roofing Advice</span
+                  >
+                </li>
+              </ul>
             </div>
-
-            <!-- Spacer to align the Premium Plan button with Basic Plan button perfectly -->
-            <div class="w-full h-[1px] bg-transparent my-6"></div>
-
-            <button
-              class="w-full py-3.5 px-6 rounded-[8px] bg-brand-dark text-white font-semibold text-sm tracking-wide transition-all duration-300 hover:bg-deep-black cursor-pointer text-center"
+            <div
+              class="w-full md:w-auto shrink-0 flex items-center self-stretch md:self-auto"
             >
-              Get Started
-            </button>
-
-            <!-- Features List -->
-            <ul class="mt-8 space-y-4">
-              <li class="flex items-center gap-3">
-                <svg
-                  class="w-[18px] h-[18px] text-foreground shrink-0"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                  ></path>
-                </svg>
-                <span class="body-sm font-semibold text-brand-dark"
-                  >Full Roof Inspection & Maintenance</span
-                >
-              </li>
-              <li class="flex items-center gap-3">
-                <svg
-                  class="w-[18px] h-[18px] text-foreground shrink-0"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                  ></path>
-                </svg>
-                <span class="body-sm font-semibold text-brand-dark"
-                  >All Repairs Included (Minor to Major)</span
-                >
-              </li>
-              <li class="flex items-center gap-3">
-                <svg
-                  class="w-[18px] h-[18px] text-foreground shrink-0"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                  ></path>
-                </svg>
-                <span class="body-sm font-semibold text-brand-dark"
-                  >Gutter, Downspout & Flashing Service</span
-                >
-              </li>
-              <li class="flex items-center gap-3">
-                <svg
-                  class="w-[18px] h-[18px] text-foreground shrink-0"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                  ></path>
-                </svg>
-                <span class="body-sm font-semibold text-brand-dark"
-                  >Priority Scheduling</span
-                >
-              </li>
-              <li class="flex items-center gap-3">
-                <svg
-                  class="w-[18px] h-[18px] text-foreground shrink-0"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                  ></path>
-                </svg>
-                <span class="body-sm font-semibold text-brand-dark"
-                  >5-Year Service Warranty</span
-                >
-              </li>
-            </ul>
+              <button
+                class="w-full md:w-auto py-3.5 px-10 rounded-[8px] bg-transparent border border-black/15 text-deep-black font-semibold text-sm tracking-wide transition-all duration-300 hover:bg-black/[0.03] hover:border-black/30 cursor-pointer text-center min-w-[180px]"
+              >
+                Book A Call
+              </button>
+            </div>
           </div>
         </div>
       </div>
-
-      <!-- Personalized Care Banner -->
-      <section
-        id="pricing-care"
-        class="bg-light-neutral rounded-[24px] p-8 md:p-10 transition-all duration-300 hover:shadow-xl hover:shadow-black/5"
-      >
-        <div
-          class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8"
-        >
-          <div class="flex-1">
-            <h3 class="text-brand-dark">Personalized Care</h3>
-            <p class="body-sm text-medium-gray mt-3 max-w-[620px]">
-              We provide roofing solutions customized to meet your unique needs
-              perfectly.
-            </p>
-            <ul
-              class="mt-6 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8"
-            >
-              <li class="flex items-center gap-3">
-                <svg
-                  class="w-[18px] h-[18px] text-foreground shrink-0"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                  ></path>
-                </svg>
-                <span class="body-sm font-semibold text-brand-dark"
-                  >All the Services Listed Above</span
-                >
-              </li>
-              <li class="flex items-center gap-3">
-                <svg
-                  class="w-[18px] h-[18px] text-foreground shrink-0"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                  ></path>
-                </svg>
-                <span class="body-sm font-semibold text-brand-dark"
-                  >24/7 Expert Roofing Advice</span
-                >
-              </li>
-            </ul>
-          </div>
-          <div
-            class="w-full md:w-auto shrink-0 flex items-center self-stretch md:self-auto"
-          >
-            <button
-              class="w-full md:w-auto py-3.5 px-10 rounded-[8px] bg-transparent border border-black/15 text-deep-black font-semibold text-sm tracking-wide transition-all duration-300 hover:bg-black/[0.03] hover:border-black/30 cursor-pointer text-center min-w-[180px]"
-            >
-              Book A Call
-            </button>
-          </div>
-        </div>
-      </section>
     </section>
 
     <!-- Additional Services Section -->
-    <section
-      id="additional-services"
-      class="mt-20 md:mt-28 max-w-[1040px] mx-auto px-6 md:px-8"
-    >
-      <!-- Label and Heading -->
-      <div class="mb-12">
-        <span
-          class="text-[13px] md:text-sm font-semibold border-b border-foreground pb-0.5 tracking-wider inline-block text-foreground hover:opacity-85 transition-opacity duration-300"
-        >
-          Additional Service
-        </span>
-        <h2 class="mt-6 tracking-tight text-brand-dark">
-          Towing or jump starts,<br />we're here 24/7.
-        </h2>
-      </div>
-
-      <!-- Services List -->
-      <div class="space-y-6">
-        <!-- Item 1 -->
-        <div
-          class="flex flex-col md:flex-row md:items-center justify-between py-2 gap-4"
-        >
-          <div class="flex items-start gap-4 md:gap-6 flex-1">
-            <div
-              class="size-14 shrink-0 rounded-full bg-deep-black flex items-center justify-center shadow-md"
-            >
-              <!-- Lightning Bolt SVG -->
-              <svg
-                class="w-6 h-6 text-electric-lime"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z"
-                ></path>
-              </svg>
-            </div>
-            <div>
-              <h3 class="h6 text-brand-dark">Wiring & Rewiring (Electrical)</h3>
-              <p class="body-sm text-medium-gray mt-2 max-w-[540px]">
-                Reliable and affordable plumbing—leaks, repairs, or
-                replacements, we fix it right the first time.
-              </p>
-            </div>
-          </div>
-          <div class="text-left md:text-right shrink-0">
-            <div class="flex items-baseline md:justify-end gap-1.5">
-              <span class="body-sm font-semibold text-medium-gray"
-                >Starting at</span
-              >
-              <span
-                class="text-2xl md:text-3xl font-bold font-urbanist text-brand-dark"
-                >$99</span
-              >
-            </div>
-            <p class="body-sm text-medium-gray mt-1 max-w-[240px] md:ml-auto">
-              Prevent damage, save money, and ensure safety.
-            </p>
-          </div>
-        </div>
-
-        <!-- Item 2 -->
-        <div
-          class="flex flex-col md:flex-row md:items-center justify-between py-2 gap-4"
-        >
-          <div class="flex items-start gap-4 md:gap-6 flex-1">
-            <div
-              class="size-14 shrink-0 rounded-full bg-deep-black flex items-center justify-center shadow-md"
-            >
-              <!-- Wrench SVG -->
-              <svg
-                class="w-6 h-6 text-electric-lime"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
-                ></path>
-              </svg>
-            </div>
-            <div>
-              <h3 class="h6 text-brand-dark">Leak Repair (Plumbing)</h3>
-              <p class="body-sm text-medium-gray mt-2 max-w-[540px]">
-                Reliable and affordable plumbing—leaks, repairs, or
-                replacements, we fix it right the first time.
-              </p>
-            </div>
-          </div>
-          <div class="text-left md:text-right shrink-0">
-            <div class="flex items-baseline md:justify-end gap-1.5">
-              <span class="body-sm font-semibold text-medium-gray"
-                >Starting at</span
-              >
-              <span
-                class="text-2xl md:text-3xl font-bold font-urbanist text-brand-dark"
-                >$129</span
-              >
-            </div>
-            <p class="body-sm text-medium-gray mt-1 max-w-[240px] md:ml-auto">
-              Prevent damage, save money, and ensure safety.
-            </p>
-          </div>
-        </div>
-
-        <!-- Divider -->
-        <div class="w-full h-[1px] bg-light-neutral my-8"></div>
-
-        <!-- Item 3 -->
-        <div
-          class="flex flex-col md:flex-row md:items-center justify-between py-2 gap-4"
-        >
-          <div class="flex items-start gap-4 md:gap-6 flex-1">
-            <div
-              class="size-14 shrink-0 rounded-full bg-deep-black flex items-center justify-center shadow-md"
-            >
-              <!-- Water Heater Installation / Droplet SVG -->
-              <svg
-                class="w-6 h-6 text-electric-lime"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M12 2C12 2 6 9 6 14a6 6 0 0012 0c0-5-6-12-6-12z"></path>
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M12 17a3 3 0 003-3c0-1.5-1.5-3-3-3s-3 1.5-3 3a3 3 0 003 3z"
-                ></path>
-              </svg>
-            </div>
-            <div>
-              <h3 class="h6 text-brand-dark">
-                Water Heater Installation (Roofing)
-              </h3>
-              <p class="body-sm text-medium-gray mt-2 max-w-[540px]">
-                Reliable and affordable plumbing—leaks, repairs, or
-                replacements, we fix it right the first time.
-              </p>
-            </div>
-          </div>
-          <div class="text-left md:text-right shrink-0">
-            <div class="flex items-baseline md:justify-end gap-1.5">
-              <span class="body-sm font-semibold text-medium-gray"
-                >Starting at</span
-              >
-              <span
-                class="text-2xl md:text-3xl font-bold font-urbanist text-brand-dark"
-                >$60</span
-              >
-            </div>
-            <p class="body-sm text-medium-gray mt-1 max-w-[240px] md:ml-auto">
-              Prevent damage, save money, and ensure safety.
-            </p>
-          </div>
-        </div>
-
-        <!-- Item 4 -->
-        <div
-          class="flex flex-col md:flex-row md:items-center justify-between py-2 gap-4"
-        >
-          <div class="flex items-start gap-4 md:gap-6 flex-1">
-            <div
-              class="size-14 shrink-0 rounded-full bg-deep-black flex items-center justify-center shadow-md"
-            >
-              <!-- Light Bulb SVG -->
-              <svg
-                class="w-6 h-6 text-electric-lime"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A5.5 5.5 0 0 0 12 2.5 5.5 5.5 0 0 0 6.5 8c0 1 .3 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"
-                ></path>
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 18h6"
-                ></path>
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M10 22h4"></path>
-              </svg>
-            </div>
-            <div>
-              <h3 class="h6 text-brand-dark">
-                BrightSpark Solutions (Electrical)
-              </h3>
-              <p class="body-sm text-medium-gray mt-2 max-w-[540px]">
-                Reliable and affordable plumbing—leaks, repairs, or
-                replacements, we fix it right the first time.
-              </p>
-            </div>
-          </div>
-          <div class="text-left md:text-right shrink-0">
-            <div class="flex items-baseline md:justify-end gap-1.5">
-              <span class="body-sm font-semibold text-medium-gray"
-                >Starting at</span
-              >
-              <span
-                class="text-2xl md:text-3xl font-bold font-urbanist text-brand-dark"
-                >$120</span
-              >
-            </div>
-            <p class="body-sm text-medium-gray mt-1 max-w-[240px] md:ml-auto">
-              Prevent damage, save money, and ensure safety.
-            </p>
-          </div>
-        </div>
-
-        <!-- Divider -->
-        <div class="w-full h-[1px] bg-light-neutral my-8"></div>
-
-        <!-- Item 5 -->
-        <div
-          class="flex flex-col md:flex-row md:items-center justify-between py-2 gap-4"
-        >
-          <div class="flex items-start gap-4 md:gap-6 flex-1">
-            <div
-              class="size-14 shrink-0 rounded-full bg-deep-black flex items-center justify-center shadow-md"
-            >
-              <!-- Faucet / Flow SVG -->
-              <svg
-                class="w-6 h-6 text-electric-lime"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M17 4h-4a3 3 0 00-3 3v2H6a1 1 0 00-1 1v4a1 1 0 001 1h4v3a3 3 0 003 3h4"
-                ></path>
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M12 14v4"></path>
-                <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h8"
-                ></path>
-              </svg>
-            </div>
-            <div>
-              <h3 class="h6 text-brand-dark">FlowFix Plumbing (Plumbing)</h3>
-              <p class="body-sm text-medium-gray mt-2 max-w-[540px]">
-                Reliable and affordable plumbing—leaks, repairs, or
-                replacements, we fix it right the first time.
-              </p>
-            </div>
-          </div>
-          <div class="text-left md:text-right shrink-0">
-            <div class="flex items-baseline md:justify-end gap-1.5">
-              <span class="body-sm font-semibold text-medium-gray"
-                >Starting at</span
-              >
-              <span
-                class="text-2xl md:text-3xl font-bold font-urbanist text-brand-dark"
-                >$78</span
-              >
-            </div>
-            <p class="body-sm text-medium-gray mt-1 max-w-[240px] md:ml-auto">
-              Prevent damage, save money, and ensure safety.
-            </p>
-          </div>
-        </div>
-
-        <!-- Bottom Divider -->
-        <div class="w-full h-[1px] bg-light-neutral my-8"></div>
-      </div>
-
-      <!-- FAQs Section -->
-      <section
-        class="mt-20 md:mt-28 max-w-[1040px] mx-auto px-6 md:px-8"
-        id="faqs-section"
-      >
+    <section id="additional-services" class="section-wrapper">
+      <div class="max-w-[1040px] mx-auto">
         <!-- Label and Heading -->
-        <div class="relative mb-12 flex flex-col items-center text-center">
-          <div class="self-start md:absolute md:left-0 md:top-0">
-            <span
-              class="text-[13px] md:text-sm font-semibold border-b border-foreground pb-0.5 tracking-wider inline-block text-foreground hover:opacity-85 transition-opacity duration-300"
-            >
-              FAQs
-            </span>
-          </div>
-          <h2
-            class="mt-4 md:mt-0 tracking-tight text-brand-dark max-w-2xl text-center font-semibold font-heading"
+        <div class="mb-12">
+          <span
+            class="text-[13px] md:text-sm font-semibold border-b border-foreground pb-0.5 tracking-wider inline-block text-foreground hover:opacity-85 transition-opacity duration-300"
           >
-            Roofing experiences that<br class="hidden sm:inline" />speak for
-            themselves
+            Additional Service
+          </span>
+          <h2 class="mt-6 tracking-tight text-brand-dark">
+            Towing or jump starts,<br />we're here 24/7.
           </h2>
         </div>
 
-        <!-- FAQs Grid: 2 columns on desktop -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-          <!-- Accordion Column (Left) -->
-          <div class="lg:col-span-7 flex flex-col gap-4">
-            <!-- Item 1 -->
-            <div
-              class="faq-pricing-item group bg-[#EDEDED] rounded-lg overflow-hidden transition-all duration-300"
-            >
-              <button
-                class="faq-pricing-toggle w-full flex items-center justify-between text-left p-6 md:p-7 cursor-pointer focus:outline-none"
-                aria-expanded="false"
-              >
-                <span
-                  class="font-urbanist font-semibold text-[17px] md:text-lg text-brand-dark pr-4 leading-snug"
-                >
-                  How do I know my roof needs repair or replacement?
-                </span>
-                <span
-                  class="flex-shrink-0 text-brand-dark transition-transform duration-200 group-[.active]:rotate-180"
-                >
-                  <!-- Plus Icon -->
-                  <svg
-                    class="size-6 faq-pricing-plus block group-[.active]:hidden"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    viewBox="0 0 24 24"
-                  >
-                    <circle cx="12" cy="12" r="9"></circle>
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M12 9v6m-3-3h6"></path>
-                  </svg>
-                  <!-- Minus Icon -->
-                  <svg
-                    class="size-6 faq-pricing-minus hidden group-[.active]:block"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    viewBox="0 0 24 24"
-                  >
-                    <circle cx="12" cy="12" r="9"></circle>
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M15 12H9"></path>
-                  </svg>
-                </span>
-              </button>
+        <!-- Services List -->
+        <div class="space-y-6">
+          <!-- Item 1 -->
+          <div
+            class="flex flex-col md:flex-row md:items-center justify-between py-2 gap-4"
+          >
+            <div class="flex items-start gap-4 md:gap-6 flex-1">
               <div
-                class="faq-pricing-content grid grid-rows-[0fr] group-[.active]:grid-rows-[1fr] transition-[grid-template-rows] duration-300 ease-in-out"
+                class="size-14 shrink-0 rounded-full bg-deep-black flex items-center justify-center shadow-md"
               >
-                <div class="overflow-hidden">
-                  <p
-                    class="px-6 md:px-7 pb-6 md:pb-7 text-medium-gray body-sm pr-6 md:pr-12 leading-relaxed"
-                  >
-                    Common signs include missing shingles, water stains on
-                    ceilings, granule buildup in gutters, or visible sagging. If
-                    your roof is over 15-20 years old, it's a good idea to
-                    schedule an inspection to assess its condition.
-                  </p>
-                </div>
+                <!-- Lightning Bolt SVG -->
+                <svg
+                  class="w-6 h-6 text-electric-lime"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z"
+                  ></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="h6 text-brand-dark">
+                  Wiring & Rewiring (Electrical)
+                </h3>
+                <p class="body-sm text-medium-gray mt-2 max-w-[540px]">
+                  Reliable and affordable plumbing—leaks, repairs, or
+                  replacements, we fix it right the first time.
+                </p>
               </div>
             </div>
-
-            <!-- Item 2 (Active by default) -->
-            <div
-              class="faq-pricing-item group active bg-[#EDEDED] rounded-lg overflow-hidden transition-all duration-300"
-            >
-              <button
-                class="faq-pricing-toggle w-full flex items-center justify-between text-left p-6 md:p-7 cursor-pointer focus:outline-none"
-                aria-expanded="true"
-              >
-                <span
-                  class="font-urbanist font-semibold text-[17px] md:text-lg text-brand-dark pr-4 leading-snug"
+            <div class="text-left md:text-right shrink-0">
+              <div class="flex items-baseline md:justify-end gap-1.5">
+                <span class="body-sm font-semibold text-medium-gray"
+                  >Starting at</span
                 >
-                  How long does a typical roofing project take?
-                </span>
                 <span
-                  class="flex-shrink-0 text-brand-dark transition-transform duration-200 group-[.active]:rotate-180"
+                  class="text-2xl md:text-3xl font-bold font-urbanist text-brand-dark"
+                  >$99</span
                 >
-                  <!-- Plus Icon -->
-                  <svg
-                    class="size-6 faq-pricing-plus block group-[.active]:hidden"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    viewBox="0 0 24 24"
-                  >
-                    <circle cx="12" cy="12" r="9"></circle>
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M12 9v6m-3-3h6"></path>
-                  </svg>
-                  <!-- Minus Icon -->
-                  <svg
-                    class="size-6 faq-pricing-minus hidden group-[.active]:block"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    viewBox="0 0 24 24"
-                  >
-                    <circle cx="12" cy="12" r="9"></circle>
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M15 12H9"></path>
-                  </svg>
-                </span>
-              </button>
-              <div
-                class="faq-pricing-content grid grid-rows-[0fr] group-[.active]:grid-rows-[1fr] transition-[grid-template-rows] duration-300 ease-in-out"
-              >
-                <div class="overflow-hidden">
-                  <p
-                    class="px-6 md:px-7 pb-6 md:pb-7 text-medium-gray body-sm pr-6 md:pr-12 leading-relaxed"
-                  >
-                    We offer a range of durable, high-quality roofing materials
-                    tailored to your home's needs and style.
-                  </p>
-                </div>
               </div>
-            </div>
-
-            <!-- Item 3 -->
-            <div
-              class="faq-pricing-item group bg-[#EDEDED] rounded-lg overflow-hidden transition-all duration-300"
-            >
-              <button
-                class="faq-pricing-toggle w-full flex items-center justify-between text-left p-6 md:p-7 cursor-pointer focus:outline-none"
-                aria-expanded="false"
-              >
-                <span
-                  class="font-urbanist font-semibold text-[17px] md:text-lg text-brand-dark pr-4 leading-snug"
-                >
-                  What types of roofing materials do you offer?
-                </span>
-                <span
-                  class="flex-shrink-0 text-brand-dark transition-transform duration-200 group-[.active]:rotate-180"
-                >
-                  <!-- Plus Icon -->
-                  <svg
-                    class="size-6 faq-pricing-plus block group-[.active]:hidden"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    viewBox="0 0 24 24"
-                  >
-                    <circle cx="12" cy="12" r="9"></circle>
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M12 9v6m-3-3h6"></path>
-                  </svg>
-                  <!-- Minus Icon -->
-                  <svg
-                    class="size-6 faq-pricing-minus hidden group-[.active]:block"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    viewBox="0 0 24 24"
-                  >
-                    <circle cx="12" cy="12" r="9"></circle>
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M15 12H9"></path>
-                  </svg>
-                </span>
-              </button>
-              <div
-                class="faq-pricing-content grid grid-rows-[0fr] group-[.active]:grid-rows-[1fr] transition-[grid-template-rows] duration-300 ease-in-out"
-              >
-                <div class="overflow-hidden">
-                  <p
-                    class="px-6 md:px-7 pb-6 md:pb-7 text-medium-gray body-sm pr-6 md:pr-12 leading-relaxed"
-                  >
-                    We provide a comprehensive range of roofing options,
-                    including architectural shingles, standing seam metal, clay
-                    tiles, slate, and specialized flat roof membranes.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Item 4 -->
-            <div
-              class="faq-pricing-item group bg-[#EDEDED] rounded-lg overflow-hidden transition-all duration-300"
-            >
-              <button
-                class="faq-pricing-toggle w-full flex items-center justify-between text-left p-6 md:p-7 cursor-pointer focus:outline-none"
-                aria-expanded="false"
-              >
-                <span
-                  class="font-urbanist font-semibold text-[17px] md:text-lg text-brand-dark pr-4 leading-snug"
-                >
-                  Are your roofing services covered by warranty?
-                </span>
-                <span
-                  class="flex-shrink-0 text-brand-dark transition-transform duration-200 group-[.active]:rotate-180"
-                >
-                  <!-- Plus Icon -->
-                  <svg
-                    class="size-6 faq-pricing-plus block group-[.active]:hidden"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    viewBox="0 0 24 24"
-                  >
-                    <circle cx="12" cy="12" r="9"></circle>
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M12 9v6m-3-3h6"></path>
-                  </svg>
-                  <!-- Minus Icon -->
-                  <svg
-                    class="size-6 faq-pricing-minus hidden group-[.active]:block"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    viewBox="0 0 24 24"
-                  >
-                    <circle cx="12" cy="12" r="9"></circle>
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M15 12H9"></path>
-                  </svg>
-                </span>
-              </button>
-              <div
-                class="faq-pricing-content grid grid-rows-[0fr] group-[.active]:grid-rows-[1fr] transition-[grid-template-rows] duration-300 ease-in-out"
-              >
-                <div class="overflow-hidden">
-                  <p
-                    class="px-6 md:px-7 pb-6 md:pb-7 text-medium-gray body-sm pr-6 md:pr-12 leading-relaxed"
-                  >
-                    Yes, all our roofing installations are backed by both a
-                    robust manufacturer's material warranty and our own
-                    comprehensive workmanship guarantee.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Item 5 -->
-            <div
-              class="faq-pricing-item group bg-[#EDEDED] rounded-lg overflow-hidden transition-all duration-300"
-            >
-              <button
-                class="faq-pricing-toggle w-full flex items-center justify-between text-left p-6 md:p-7 cursor-pointer focus:outline-none"
-                aria-expanded="false"
-              >
-                <span
-                  class="font-urbanist font-semibold text-[17px] md:text-lg text-brand-dark pr-4 leading-snug"
-                >
-                  Do you offer free estimates or inspections?
-                </span>
-                <span
-                  class="flex-shrink-0 text-brand-dark transition-transform duration-200 group-[.active]:rotate-180"
-                >
-                  <!-- Plus Icon -->
-                  <svg
-                    class="size-6 faq-pricing-plus block group-[.active]:hidden"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    viewBox="0 0 24 24"
-                  >
-                    <circle cx="12" cy="12" r="9"></circle>
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M12 9v6m-3-3h6"></path>
-                  </svg>
-                  <!-- Minus Icon -->
-                  <svg
-                    class="size-6 faq-pricing-minus hidden group-[.active]:block"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    viewBox="0 0 24 24"
-                  >
-                    <circle cx="12" cy="12" r="9"></circle>
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M15 12H9"></path>
-                  </svg>
-                </span>
-              </button>
-              <div
-                class="faq-pricing-content grid grid-rows-[0fr] group-[.active]:grid-rows-[1fr] transition-[grid-template-rows] duration-300 ease-in-out"
-              >
-                <div class="overflow-hidden">
-                  <p
-                    class="px-6 md:px-7 pb-6 md:pb-7 text-medium-gray body-sm pr-6 md:pr-12 leading-relaxed"
-                  >
-                    Absolutely. We offer complimentary, no-obligation roof
-                    inspections and detailed cost estimates to help you plan
-                    your project with confidence.
-                  </p>
-                </div>
-              </div>
+              <p class="body-sm text-medium-gray mt-1 max-w-[240px] md:ml-auto">
+                Prevent damage, save money, and ensure safety.
+              </p>
             </div>
           </div>
 
-          <!-- Image Column (Right) -->
-          <div class="lg:col-span-5 flex items-stretch">
-            <img
-              src="/images/about-wiring.jpg"
-              alt="Roofero technician wearing safety gear working on wiring next to a brick wall"
-              class="w-full h-[300px] lg:h-full min-h-[350px] object-cover rounded-lg border border-light-neutral dark:border-brand-dark/20 shadow-[0px_2px_4px_rgba(0,0,0,0.04)]"
-            />
+          <!-- Item 2 -->
+          <div
+            class="flex flex-col md:flex-row md:items-center justify-between py-2 gap-4"
+          >
+            <div class="flex items-start gap-4 md:gap-6 flex-1">
+              <div
+                class="size-14 shrink-0 rounded-full bg-deep-black flex items-center justify-center shadow-md"
+              >
+                <!-- Wrench SVG -->
+                <svg
+                  class="w-6 h-6 text-electric-lime"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
+                  ></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="h6 text-brand-dark">Leak Repair (Plumbing)</h3>
+                <p class="body-sm text-medium-gray mt-2 max-w-[540px]">
+                  Reliable and affordable plumbing—leaks, repairs, or
+                  replacements, we fix it right the first time.
+                </p>
+              </div>
+            </div>
+            <div class="text-left md:text-right shrink-0">
+              <div class="flex items-baseline md:justify-end gap-1.5">
+                <span class="body-sm font-semibold text-medium-gray"
+                  >Starting at</span
+                >
+                <span
+                  class="text-2xl md:text-3xl font-bold font-urbanist text-brand-dark"
+                  >$129</span
+                >
+              </div>
+              <p class="body-sm text-medium-gray mt-1 max-w-[240px] md:ml-auto">
+                Prevent damage, save money, and ensure safety.
+              </p>
+            </div>
           </div>
+
+          <!-- Divider -->
+          <div class="w-full h-[1px] bg-light-neutral my-8"></div>
+
+          <!-- Item 3 -->
+          <div
+            class="flex flex-col md:flex-row md:items-center justify-between py-2 gap-4"
+          >
+            <div class="flex items-start gap-4 md:gap-6 flex-1">
+              <div
+                class="size-14 shrink-0 rounded-full bg-deep-black flex items-center justify-center shadow-md"
+              >
+                <!-- Water Heater Installation / Droplet SVG -->
+                <svg
+                  class="w-6 h-6 text-electric-lime"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 2C12 2 6 9 6 14a6 6 0 0012 0c0-5-6-12-6-12z"></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 17a3 3 0 003-3c0-1.5-1.5-3-3-3s-3 1.5-3 3a3 3 0 003 3z"
+                  ></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="h6 text-brand-dark">
+                  Water Heater Installation (Roofing)
+                </h3>
+                <p class="body-sm text-medium-gray mt-2 max-w-[540px]">
+                  Reliable and affordable plumbing—leaks, repairs, or
+                  replacements, we fix it right the first time.
+                </p>
+              </div>
+            </div>
+            <div class="text-left md:text-right shrink-0">
+              <div class="flex items-baseline md:justify-end gap-1.5">
+                <span class="body-sm font-semibold text-medium-gray"
+                  >Starting at</span
+                >
+                <span
+                  class="text-2xl md:text-3xl font-bold font-urbanist text-brand-dark"
+                  >$60</span
+                >
+              </div>
+              <p class="body-sm text-medium-gray mt-1 max-w-[240px] md:ml-auto">
+                Prevent damage, save money, and ensure safety.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div
+            class="flex flex-col md:flex-row md:items-center justify-between py-2 gap-4"
+          >
+            <div class="flex items-start gap-4 md:gap-6 flex-1">
+              <div
+                class="size-14 shrink-0 rounded-full bg-deep-black flex items-center justify-center shadow-md"
+              >
+                <!-- Light Bulb SVG -->
+                <svg
+                  class="w-6 h-6 text-electric-lime"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A5.5 5.5 0 0 0 12 2.5 5.5 5.5 0 0 0 6.5 8c0 1 .3 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"
+                  ></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 18h6"></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M10 22h4"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="h6 text-brand-dark">
+                  BrightSpark Solutions (Electrical)
+                </h3>
+                <p class="body-sm text-medium-gray mt-2 max-w-[540px]">
+                  Reliable and affordable plumbing—leaks, repairs, or
+                  replacements, we fix it right the first time.
+                </p>
+              </div>
+            </div>
+            <div class="text-left md:text-right shrink-0">
+              <div class="flex items-baseline md:justify-end gap-1.5">
+                <span class="body-sm font-semibold text-medium-gray"
+                  >Starting at</span
+                >
+                <span
+                  class="text-2xl md:text-3xl font-bold font-urbanist text-brand-dark"
+                  >$120</span
+                >
+              </div>
+              <p class="body-sm text-medium-gray mt-1 max-w-[240px] md:ml-auto">
+                Prevent damage, save money, and ensure safety.
+              </p>
+            </div>
+          </div>
+
+          <!-- Divider -->
+          <div class="w-full h-[1px] bg-light-neutral my-8"></div>
+
+          <!-- Item 5 -->
+          <div
+            class="flex flex-col md:flex-row md:items-center justify-between py-2 gap-4"
+          >
+            <div class="flex items-start gap-4 md:gap-6 flex-1">
+              <div
+                class="size-14 shrink-0 rounded-full bg-deep-black flex items-center justify-center shadow-md"
+              >
+                <!-- Faucet / Flow SVG -->
+                <svg
+                  class="w-6 h-6 text-electric-lime"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17 4h-4a3 3 0 00-3 3v2H6a1 1 0 00-1 1v4a1 1 0 001 1h4v3a3 3 0 003 3h4"
+                  ></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 14v4"></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M8 12h8"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="h6 text-brand-dark">FlowFix Plumbing (Plumbing)</h3>
+                <p class="body-sm text-medium-gray mt-2 max-w-[540px]">
+                  Reliable and affordable plumbing—leaks, repairs, or
+                  replacements, we fix it right the first time.
+                </p>
+              </div>
+            </div>
+            <div class="text-left md:text-right shrink-0">
+              <div class="flex items-baseline md:justify-end gap-1.5">
+                <span class="body-sm font-semibold text-medium-gray"
+                  >Starting at</span
+                >
+                <span
+                  class="text-2xl md:text-3xl font-bold font-urbanist text-brand-dark"
+                  >$78</span
+                >
+              </div>
+              <p class="body-sm text-medium-gray mt-1 max-w-[240px] md:ml-auto">
+                Prevent damage, save money, and ensure safety.
+              </p>
+            </div>
+          </div>
+
+          <!-- Bottom Divider -->
+          <div class="w-full h-[1px] bg-light-neutral my-8"></div>
         </div>
-      </section>
+
+        <!-- FAQs Section -->
+        <section id="faqs-section">
+          <div class="max-w-[1040px] mx-auto">
+            <!-- Label and Heading -->
+            <div class="relative mb-12 flex flex-col items-center text-center">
+              <div class="self-start md:absolute md:left-0 md:top-0">
+                <span
+                  class="text-[13px] md:text-sm font-semibold border-b border-foreground pb-0.5 tracking-wider inline-block text-foreground hover:opacity-85 transition-opacity duration-300"
+                >
+                  FAQs
+                </span>
+              </div>
+              <h2
+                class="mt-4 md:mt-0 tracking-tight text-brand-dark max-w-2xl text-center font-semibold font-heading"
+              >
+                Roofing experiences that<br class="hidden sm:inline" />speak for
+                themselves
+              </h2>
+            </div>
+
+            <!-- FAQs Grid: 2 columns on desktop -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+              <!-- Accordion Column (Left) -->
+              <div class="lg:col-span-7 flex flex-col gap-4">
+                <!-- Item 1 -->
+                <div
+                  class="faq-pricing-item group bg-[#EDEDED] rounded-lg overflow-hidden transition-all duration-300"
+                >
+                  <button
+                    class="faq-pricing-toggle w-full flex items-center justify-between text-left p-6 md:p-7 cursor-pointer focus:outline-none"
+                    aria-expanded="false"
+                  >
+                    <span
+                      class="font-urbanist font-semibold text-[17px] md:text-lg text-brand-dark pr-4 leading-snug"
+                    >
+                      How do I know my roof needs repair or replacement?
+                    </span>
+                    <span
+                      class="flex-shrink-0 text-brand-dark transition-transform duration-200 group-[.active]:rotate-180"
+                    >
+                      <!-- Plus Icon -->
+                      <svg
+                        class="size-6 faq-pricing-plus block group-[.active]:hidden"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle cx="12" cy="12" r="9"></circle>
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M12 9v6m-3-3h6"></path>
+                      </svg>
+                      <!-- Minus Icon -->
+                      <svg
+                        class="size-6 faq-pricing-minus hidden group-[.active]:block"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle cx="12" cy="12" r="9"></circle>
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M15 12H9"></path>
+                      </svg>
+                    </span>
+                  </button>
+                  <div
+                    class="faq-pricing-content grid grid-rows-[0fr] group-[.active]:grid-rows-[1fr] transition-[grid-template-rows] duration-300 ease-in-out"
+                  >
+                    <div class="overflow-hidden">
+                      <p
+                        class="px-6 md:px-7 pb-6 md:pb-7 text-medium-gray body-sm pr-6 md:pr-12 leading-relaxed"
+                      >
+                        Common signs include missing shingles, water stains on
+                        ceilings, granule buildup in gutters, or visible
+                        sagging. If your roof is over 15-20 years old, it's a
+                        good idea to schedule an inspection to assess its
+                        condition.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Item 2 (Active by default) -->
+                <div
+                  class="faq-pricing-item group active bg-[#EDEDED] rounded-lg overflow-hidden transition-all duration-300"
+                >
+                  <button
+                    class="faq-pricing-toggle w-full flex items-center justify-between text-left p-6 md:p-7 cursor-pointer focus:outline-none"
+                    aria-expanded="true"
+                  >
+                    <span
+                      class="font-urbanist font-semibold text-[17px] md:text-lg text-brand-dark pr-4 leading-snug"
+                    >
+                      How long does a typical roofing project take?
+                    </span>
+                    <span
+                      class="flex-shrink-0 text-brand-dark transition-transform duration-200 group-[.active]:rotate-180"
+                    >
+                      <!-- Plus Icon -->
+                      <svg
+                        class="size-6 faq-pricing-plus block group-[.active]:hidden"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle cx="12" cy="12" r="9"></circle>
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M12 9v6m-3-3h6"></path>
+                      </svg>
+                      <!-- Minus Icon -->
+                      <svg
+                        class="size-6 faq-pricing-minus hidden group-[.active]:block"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle cx="12" cy="12" r="9"></circle>
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M15 12H9"></path>
+                      </svg>
+                    </span>
+                  </button>
+                  <div
+                    class="faq-pricing-content grid grid-rows-[0fr] group-[.active]:grid-rows-[1fr] transition-[grid-template-rows] duration-300 ease-in-out"
+                  >
+                    <div class="overflow-hidden">
+                      <p
+                        class="px-6 md:px-7 pb-6 md:pb-7 text-medium-gray body-sm pr-6 md:pr-12 leading-relaxed"
+                      >
+                        We offer a range of durable, high-quality roofing
+                        materials tailored to your home's needs and style.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div
+                  class="faq-pricing-item group bg-[#EDEDED] rounded-lg overflow-hidden transition-all duration-300"
+                >
+                  <button
+                    class="faq-pricing-toggle w-full flex items-center justify-between text-left p-6 md:p-7 cursor-pointer focus:outline-none"
+                    aria-expanded="false"
+                  >
+                    <span
+                      class="font-urbanist font-semibold text-[17px] md:text-lg text-brand-dark pr-4 leading-snug"
+                    >
+                      What types of roofing materials do you offer?
+                    </span>
+                    <span
+                      class="flex-shrink-0 text-brand-dark transition-transform duration-200 group-[.active]:rotate-180"
+                    >
+                      <!-- Plus Icon -->
+                      <svg
+                        class="size-6 faq-pricing-plus block group-[.active]:hidden"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle cx="12" cy="12" r="9"></circle>
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M12 9v6m-3-3h6"></path>
+                      </svg>
+                      <!-- Minus Icon -->
+                      <svg
+                        class="size-6 faq-pricing-minus hidden group-[.active]:block"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle cx="12" cy="12" r="9"></circle>
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M15 12H9"></path>
+                      </svg>
+                    </span>
+                  </button>
+                  <div
+                    class="faq-pricing-content grid grid-rows-[0fr] group-[.active]:grid-rows-[1fr] transition-[grid-template-rows] duration-300 ease-in-out"
+                  >
+                    <div class="overflow-hidden">
+                      <p
+                        class="px-6 md:px-7 pb-6 md:pb-7 text-medium-gray body-sm pr-6 md:pr-12 leading-relaxed"
+                      >
+                        We provide a comprehensive range of roofing options,
+                        including architectural shingles, standing seam metal,
+                        clay tiles, slate, and specialized flat roof membranes.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div
+                  class="faq-pricing-item group bg-[#EDEDED] rounded-lg overflow-hidden transition-all duration-300"
+                >
+                  <button
+                    class="faq-pricing-toggle w-full flex items-center justify-between text-left p-6 md:p-7 cursor-pointer focus:outline-none"
+                    aria-expanded="false"
+                  >
+                    <span
+                      class="font-urbanist font-semibold text-[17px] md:text-lg text-brand-dark pr-4 leading-snug"
+                    >
+                      Are your roofing services covered by warranty?
+                    </span>
+                    <span
+                      class="flex-shrink-0 text-brand-dark transition-transform duration-200 group-[.active]:rotate-180"
+                    >
+                      <!-- Plus Icon -->
+                      <svg
+                        class="size-6 faq-pricing-plus block group-[.active]:hidden"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle cx="12" cy="12" r="9"></circle>
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M12 9v6m-3-3h6"></path>
+                      </svg>
+                      <!-- Minus Icon -->
+                      <svg
+                        class="size-6 faq-pricing-minus hidden group-[.active]:block"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle cx="12" cy="12" r="9"></circle>
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M15 12H9"></path>
+                      </svg>
+                    </span>
+                  </button>
+                  <div
+                    class="faq-pricing-content grid grid-rows-[0fr] group-[.active]:grid-rows-[1fr] transition-[grid-template-rows] duration-300 ease-in-out"
+                  >
+                    <div class="overflow-hidden">
+                      <p
+                        class="px-6 md:px-7 pb-6 md:pb-7 text-medium-gray body-sm pr-6 md:pr-12 leading-relaxed"
+                      >
+                        Yes, all our roofing installations are backed by both a
+                        robust manufacturer's material warranty and our own
+                        comprehensive workmanship guarantee.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div
+                  class="faq-pricing-item group bg-[#EDEDED] rounded-lg overflow-hidden transition-all duration-300"
+                >
+                  <button
+                    class="faq-pricing-toggle w-full flex items-center justify-between text-left p-6 md:p-7 cursor-pointer focus:outline-none"
+                    aria-expanded="false"
+                  >
+                    <span
+                      class="font-urbanist font-semibold text-[17px] md:text-lg text-brand-dark pr-4 leading-snug"
+                    >
+                      Do you offer free estimates or inspections?
+                    </span>
+                    <span
+                      class="flex-shrink-0 text-brand-dark transition-transform duration-200 group-[.active]:rotate-180"
+                    >
+                      <!-- Plus Icon -->
+                      <svg
+                        class="size-6 faq-pricing-plus block group-[.active]:hidden"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle cx="12" cy="12" r="9"></circle>
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M12 9v6m-3-3h6"></path>
+                      </svg>
+                      <!-- Minus Icon -->
+                      <svg
+                        class="size-6 faq-pricing-minus hidden group-[.active]:block"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle cx="12" cy="12" r="9"></circle>
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M15 12H9"></path>
+                      </svg>
+                    </span>
+                  </button>
+                  <div
+                    class="faq-pricing-content grid grid-rows-[0fr] group-[.active]:grid-rows-[1fr] transition-[grid-template-rows] duration-300 ease-in-out"
+                  >
+                    <div class="overflow-hidden">
+                      <p
+                        class="px-6 md:px-7 pb-6 md:pb-7 text-medium-gray body-sm pr-6 md:pr-12 leading-relaxed"
+                      >
+                        Absolutely. We offer complimentary, no-obligation roof
+                        inspections and detailed cost estimates to help you plan
+                        your project with confidence.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Image Column (Right) -->
+              <div class="lg:col-span-5 flex items-stretch">
+                <img
+                  src="/images/about-wiring.jpg"
+                  alt="Roofero technician wearing safety gear working on wiring next to a brick wall"
+                  class="w-full h-[300px] lg:h-full min-h-[350px] object-cover rounded-lg border border-light-neutral dark:border-brand-dark/20 shadow-[0px_2px_4px_rgba(0,0,0,0.04)]"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </section>
 
     <!-- FAQs Toggle Script -->
