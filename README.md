@@ -1,33 +1,50 @@
-# Roofero - Professional Service Provider Website Template
+# Roofero - Premium Company Profile Showcase
 
-Roofero is a high-performance company profile website template built for service-based businesses, specifically tailored for trades such as roofing, solar, and electrical contracting. This template is designed to help businesses showcase their craftsmanship, outline their services, and convert visitors into clients.
+This repository showcases a high-fidelity, custom-built marketing platform for Roofero, a premium roofing and solar services agency. The project demonstrates professional web design, frontend engineering, and search engine optimization (SEO) capabilities, designed to attract and convert high-value clients.
 
-## Project Overview
+## Project Context
 
-This repository provides a complete, fast, and responsive marketing platform. It helps trade professionals establish online credibility and receive job inquiries directly through their website. The codebase uses Astro for fast static page generation, React for interactive forms, and Tailwind CSS for styling.
+Roofero is a premium trade services company specializing in roofing craftsmanship and solar power integration. The website built for them establishes immediate online credibility, communicates their craftsmanship, and captures leads through a structured, user-focused interface.
 
-## Key Features
+I built this website to demonstrate how modern web technologies can be combined to deliver fast, visually polished, and highly functional company profiles that drive business growth.
 
-### Complete Page Structure
-* Home: High-impact hero section, core value proposition, key highlights, and primary call-to-actions.
-* About Us: Company history, values, and team presentation sections.
-* Services: Detailed breakdown of offered services, including descriptions and visual cards.
-* Projects: A structured portfolio showcasing case studies of completed work with dynamic routing for individual project details.
-* Pricing: Transparent pricing plans and maintenance packages.
-* Contact & Estimate: Dedicated landing page for scheduling inspections and requesting estimates.
-* Legal Pages: Pre-formatted templates for Privacy Policy and Terms of Service.
+## Core Features Implemented
+
+### User Experience & Interface
+
+- Custom Branding: A modern, high-contrast dark slate foundation with energetic lime highlights designed to direct user attention to primary conversion points.
+- Smooth Motion System: Integrated GSAP (GreenSock) animations and Lenis smooth scroll to create a polished, interactive browsing experience.
+- Scoping & Estimate Request: An interactive estimate form built in React that allows prospective clients to outline their project needs.
+- Portfolio Showcase: A dynamic project case study template showcasing completed work, including structural roofing upgrades and solar installations.
+- Transparent Pricing Layout: Clear service tiers and maintenance plans designed to simplify decision-making.
 
 ### Technical Capabilities
-* Static Site Generation: Built with Astro for optimized page speed, lower hosting costs, and clean HTML output.
-* Interactive Estimate Form: React-based contact and scoping validator that guides users through the estimation process.
-* Performance & Motion: Integrated Lenis smooth scroll and GSAP animations for smooth user interactions.
-* Typography & Design Tokens: Styled with modern typography (Urbanist and Inter fonts) and consistent colors (primary slate and high-contrast lime highlights).
-* Responsive Layout: Adapts to desktop, tablet, and mobile screens.
-* Built-in SEO: Includes custom meta tags for every page, page titles, structured headings, robots.txt, and a sitemap generator.
+
+- Static Site Generation: Engineered with Astro for optimal page loading speeds, near-instantaneous transitions, and reduced hosting overhead.
+- Component-Driven Architecture: Built reusable, type-safe components in React and Astro, enabling quick customization and long-term codebase maintenance.
+- State Management: Implemented Zustand for lightweight client-side state handling to manage user sessions and theme selections.
+- Accessible UI Primitives: Constructed interactive fields, dialogs, and navigation nodes utilizing Radix UI primitives to ensure high accessibility standards.
+- Responsive Scaffolding: Structured layout grids using Tailwind CSS to adapt dynamically across mobile, tablet, and wide desktop screens.
+
+### Performance & SEO Engineering
+
+- Performance Optimization: Built with Astro to compile pages into clean, static HTML, resulting in fast load times and minimal JavaScript overhead.
+- Search Engine Optimization: Custom meta tags, descriptive title structures, semantic HTML5 tags, a custom sitemap, and robots.txt configuration.
+
+## Technical Stack
+
+- **Framework**: Astro (Static Site Generation)
+- **Frontend Library**: React (used for interactive scoping forms and components)
+- **Styling**: Tailwind CSS (utility-first styling)
+- **Animations**: GSAP (ScrollTrigger)
+- **Scroll Experience**: Lenis (smooth scrolling)
+- **UI Primitives**: Radix UI (accessible component base)
+- **Language**: TypeScript (for code reliability and type safety)
 
 ## Getting Started
 
 ### Development
+
 1. Install dependencies:
    ```bash
    npm install
@@ -39,8 +56,11 @@ This repository provides a complete, fast, and responsive marketing platform. It
 3. Open `http://localhost:4321` in your browser.
 
 ### Build and Deployment
-To compile a fully optimized, production-ready static bundle:
+
+To compile a fully optimized static bundle:
+
 ```bash
 npm run build
 ```
-The output files will be generated in the `dist` directory and are ready for deployment to any static hosting provider.
+
+The output files are generated in the `dist` directory and are ready for deployment to any static hosting provider.
